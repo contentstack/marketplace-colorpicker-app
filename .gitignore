@@ -23,3 +23,5 @@ node_modules/
 .vercel
 
 .eslintcache
+.dccache
+/ui/.npmrc
