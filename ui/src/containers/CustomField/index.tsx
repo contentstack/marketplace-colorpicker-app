@@ -11,8 +11,17 @@ import { TypeSDKData, ColorPickerData } from "../../common/types";
 /* Import node module CSS */
 /* Import our CSS */
 import "./styles.scss";
+import useJsErrorTracker from "../../hooks/useJsErrorTracker";
+import { useAppSdk } from "../../hooks/useAppSdk";
+import useAnalytics from "../../hooks/useAnalytics";
+
 
 const CustomField: React.FC = function () {
+
+	const { addMetadata, trackError } = useJsErrorTracker();
+  	const { trackEvent } = useAnalytics();
+  	const [appSdk] = useAppSdk();
+
 	const [state, setState] = useState<TypeSDKData>({
 		config: {},
 		location: {},
@@ -75,6 +84,11 @@ const CustomField: React.FC = function () {
 			appSdk.location.CustomField?.frame?.updateHeight?.(300);
 
 			const initialData = appSdk.location?.CustomField?.field?.getData();
+			
+			addMetadata("stack", `${appSdk?.stack._data.name}`);
+          	addMetadata("organization", `${appSdk?.currentUser.defaultOrganization}`);
+          	addMetadata("api_key", `${stackKey}`);
+          	addMetadata("user_uid", `${appSdk?.stack._data.collaborators[0].uid}`);
 
 			if (initialData?.rgb) {
 				setColor({
