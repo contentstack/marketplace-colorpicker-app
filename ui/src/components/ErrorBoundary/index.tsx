@@ -1,10 +1,33 @@
 import React from "react";
+import { datadogRum } from '@datadog/browser-rum';
 
-interface MyProps {}
+interface MyProps {
+	children: React.ReactElement;
+}
 
 interface MyState {
 	hasError: boolean;
 }
+
+
+//datadog-rum Installation
+datadogRum.init({
+	applicationId: `${process.env.REACT_APP_DATADOG_RUM_APPLICATION_ID}`,
+	clientToken: `${process.env.REACT_APP_DATADOG_RUM_CLIENT_TOKEN}`,
+	site: `${process.env.REACT_APP_DATADOG_RUM_SITE}`,
+	service: `${process.env.REACT_APP_DATADOG_RUM_SERVICE}`,
+	sampleRate: 100,
+	sessionReplaySampleRate: 20,
+	trackInteractions: true,
+	trackResources: true,
+	trackLongTasks: true,
+	defaultPrivacyLevel: 'mask-user-input',
+	useCrossSiteSessionCookie: true,
+  });
+  
+  //sending MetaData to Datadog RUM
+  datadogRum.setGlobalContextProperty('Application Type', 'Marketplace');
+  datadogRum.setGlobalContextProperty('Application Name', 'JSON Editor App');
 
 class ErrorBoundary extends React.Component<MyProps, MyState> {
 	constructor(props: any) {
