@@ -50,6 +50,7 @@ const CustomField: React.FC = function () {
 	});
 
 	const togglePickerVisibility = () => {
+		trackEvent('toggle picker is visible')
 		setColor((prev) => ({
 			showPicker: !prev.showPicker,
 			pickerColor: prev.pickerColor,
@@ -57,6 +58,7 @@ const CustomField: React.FC = function () {
 	};
 
 	const closePicker = () => {
+		trackEvent('Color picker closed')
 		setColor((prev) => ({
 			showPicker: false,
 			pickerColor: prev.pickerColor,
@@ -64,6 +66,7 @@ const CustomField: React.FC = function () {
 	};
 
 	const pickerColorChanged = (colour: any) => {
+		trackEvent('color changed')
 		setColor((prev) => ({
 			showPicker: prev.showPicker,
 			pickerColor: colour.rgb,
