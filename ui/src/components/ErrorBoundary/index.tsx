@@ -9,13 +9,16 @@ interface MyState {
 	hasError: boolean;
 }
 
+const { REACT_APP_DATADOG_RUM_APPLICATION_ID, REACT_APP_DATADOG_RUM_CLIENT_TOKEN, REACT_APP_DATADOG_RUM_SITE, REACT_APP_DATADOG_RUM_SERVICE } = process.env
+
+
 
 //datadog-rum Installation
 datadogRum.init({
-	applicationId: `${process.env.REACT_APP_DATADOG_RUM_APPLICATION_ID}`,
-	clientToken: `${process.env.REACT_APP_DATADOG_RUM_CLIENT_TOKEN}`,
-	site: `${process.env.REACT_APP_DATADOG_RUM_SITE}`,
-	service: `${process.env.REACT_APP_DATADOG_RUM_SERVICE}`,
+	applicationId: `${REACT_APP_DATADOG_RUM_APPLICATION_ID}`,
+	clientToken: `${REACT_APP_DATADOG_RUM_CLIENT_TOKEN}`,
+	site: `${REACT_APP_DATADOG_RUM_SITE}`,
+	service: `${REACT_APP_DATADOG_RUM_SERVICE}`,
 	sampleRate: 100,
 	sessionReplaySampleRate: 20,
 	trackInteractions: true,
