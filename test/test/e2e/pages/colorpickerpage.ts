@@ -1,5 +1,5 @@
 import { Locator, Page, Frame } from '@playwright/test';
-import { elements } from '../elements/colorpicker.elements';
+
 
 export class colorPickerApp {
   readonly page: Page;
