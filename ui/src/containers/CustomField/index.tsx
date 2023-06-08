@@ -59,10 +59,14 @@ const CustomField: React.FC = function () {
 			showPicker: prev.showPicker,
 			pickerColor: colour.rgb,
 		}));
-		state.location?.CustomField?.field?.setData(colour);
 	};
 
+	const pickerColorChangedComplete = (colour: any ) => {
+		state.location?.CustomField?.field?.setData(colour);
+	}
+
 	useEffect(() => {
+		console.info(state.location?.CustomField?.field?.getData().hex);
 		ContentstackAppSdk.init().then(async (appSdk) => {
 			const config = await appSdk?.getConfig();
 
@@ -112,6 +116,7 @@ const CustomField: React.FC = function () {
 								<SketchPicker
 									color={stateColor.pickerColor}
 									onChange={pickerColorChanged}
+									onChangeComplete={pickerColorChangedComplete}
 								/>
 							</div>
 						) : null}
