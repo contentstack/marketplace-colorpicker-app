@@ -1,13 +1,21 @@
-import { useAppSdk } from './useAppSdk';
+import { useAppSdk } from "./useAppSdk";
+import { useCallback } from "react";
 
-const useAnalytics = () => {
-  const [appSdk] = useAppSdk();
+const ENV: string = process.env.NODE_ENV;
 
-  const trackEvent = (event: string, eventData: any = {}) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    return appSdk?.pulse(event, eventData);
-  };
+type AnalyticsApi = { trackEvent: Function };
+
+export const useAnalytics = (): AnalyticsApi => {
+  const [appSDK] = useAppSdk();
+  const trackEvent = useCallback(
+    (event: string, eventData: { [key: string]: string } = {}) => {
+      // skip tracking if env is development
+      if (ENV === "production") {
+        appSDK?.pulse(event, eventData);
+      }
+    },
+    [appSDK]
+  );
 
   return { trackEvent };
 };
