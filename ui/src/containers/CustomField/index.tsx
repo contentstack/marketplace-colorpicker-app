@@ -72,26 +72,19 @@ const CustomField: React.FC = function () {
   };
 
   useEffect(() => {
-    console.info(state.location?.CustomField?.field?.getData().hex);
-
     ContentstackAppSdk.init().then(async (appSdk) => {
       const config = await appSdk?.getConfig();
-
       setState({
         config,
         location: appSdk.location,
         appSdkInitialized: true,
       });
-
       appSdk.location.CustomField?.frame?.updateHeight?.(300);
-
       const initialData = appSdk.location?.CustomField?.field?.getData();
-
       addMetadata("stack", `${appSdk?.stack._data.name}`);
       addMetadata("organization", `${appSdk?.currentUser.defaultOrganization}`);
       addMetadata("api_key", `${stackKey}`);
       addMetadata("user_uid", `${appSdk?.stack._data.collaborators[0].uid}`);
-
       if (initialData?.rgb) {
         setColor({
           showPicker: false,
