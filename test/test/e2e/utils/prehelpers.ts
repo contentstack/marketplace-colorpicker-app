@@ -49,7 +49,7 @@ export const createApp = async (authToken: string) => {
       authtoken: authToken,
     },
     data: {
-      name: `Calendar App ${Math.floor(Math.random() * 1000)}`,
+      name: `Color picker App ${Math.floor(Math.random() * 1000)}`,
       target_type: "stack",
       oauth: {
         redirect_uri: "http://localhost:3000/oauth-callback",
@@ -84,8 +84,8 @@ export const updateApp = async (authToken: string, appId: string) => {
             type: "cs.cm.stack.dashboard",
             meta: [
               {
-                name: `Calendar app ${Math.floor(Math.random() * 1000)}`,
-                path: "/stack-dashboard",
+                name: `Color picker app ${Math.floor(Math.random() * 1000)}`,
+                path: "/field-extension",
                 signed: true,
                 enabled: true,
                 default_width: "full",
@@ -292,7 +292,7 @@ export const createRelease = async (
     data: {
       release: {
         name: generateTitle,
-        description: "calendar app e2e testing demo data",
+        description: "Color picker app e2e testing demo data",
         item: {
           uid: entryId,
           content_type_uid: contentTypeId,
