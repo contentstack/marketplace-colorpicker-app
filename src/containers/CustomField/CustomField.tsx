@@ -9,7 +9,6 @@ import "./style.css";
 
 const CustomFieldExtension = () => {
   const [fieldColor, setFieldColor] = useCustomField();
-  console.log("fieldColor", fieldColor);
 
   const [stateColor, setColor] = useState<ColorPickerData>({
     showPicker: false,
@@ -51,7 +50,6 @@ const CustomFieldExtension = () => {
       showPicker: prev.showPicker,
       pickerColor: colour.rgb,
     }));
-    console.log("pickerColorChanged", colour);
     setFieldColor(colour);
   };
 
