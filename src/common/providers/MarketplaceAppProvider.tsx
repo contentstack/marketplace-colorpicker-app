@@ -8,6 +8,7 @@ import { useAnalytics } from "../hooks/useAnalytics";
 import { useJSErrorTracking } from "../hooks/useJSErrorTracking";
 import { KeyValueObj } from "../types/types";
 import { getAppLocation } from "../utils/functions";
+import { eventNames } from "../../constants";
 
 type ProviderProps = {
   children?: React.ReactNode;
@@ -40,12 +41,12 @@ export const MarketplaceAppProvider: React.FC<ProviderProps> = ({ children }) =>
           "User Id": get(appSdk, "stack._data.collaborators.0.uid", ""), //first uuid from collaborators
         };
         setErrorsMetaData(properties); // set global event data for errors
-        trackEvent("App Loaded Successfully");
+        trackEvent(eventNames.APP_INITIALIZE_SUCCESS);
       })
       .catch((err: Error) => {
         setFailed(true);
         trackError(err);
-        trackEvent("App Load Failure");
+        trackEvent(eventNames.APP_INITIALIZE_FAILURE);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
