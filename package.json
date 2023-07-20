@@ -1,31 +1,97 @@
 {
-  "name": "marketplace-colorpicker-app",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/contentstack-expert-services/marketplace-app-template.git"
+  "name": "marketplace-app-boilerplate",
+  "version": "1.2.2",
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@contentstack/app-sdk": "^1.5.0",
+    "@contentstack/venus-components": "2.0.1",
+    "@datadog/browser-rum": "^4.45.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.13.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "axios": "^1.3.4",
+    "form-data": "^4.0.0",
+    "html-react-parser": "^3.0.8",
+    "jsonfile": "^6.1.0",
+    "react": "^18.2.0",
+    "react-color": "2.19.3",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "react-app-rewired": "2.2.1",
+    "reactcss": "1.2.3",
+    "typescript": "^4.9.3",
+    "web-vitals": "^3.1.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/contentstack-expert-services/marketplace-app-template/issues"
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-scripts test --env=jsdom --verbose",
+    "eject": "react-scripts eject",
+    "show-report": "npx playwright show-report",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --fix && npm run format",
+    "lint:strict": "eslint --max-warnings=0 src",
+    "typecheck": "tsc --noEmit --incremental false",
+    "test:watch": "jest --watch",
+    "format": "prettier -w .",
+    "format:check": "prettier -c .",
+    "prepare": "husky install",
+    "test:chrome": "npx playwright test --config=playwright.config.ts --project=Chromium",
+    "test:firefox": "npx playwright test --config=playwright.config.ts --project=firefox",
+    "test:chrome-headed": "npx playwright test --headed --config=playwright.config.ts --project=Chromium",
+    "test:firefox-headed": "npx playwright test --headed --config=playwright.config.ts --project=firefox"
   },
-  "homepage": "https://github.com/contentstack-expert-services/marketplace-app-template#readme",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "husky": "^4.3.8",
-    "prettier": "^2.4.1",
-    "rimraf": "^3.0.2",
-    "validate-branch-name": "^1.3.0"
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@cucumber/cucumber": "^8.4.0",
+    "@playwright/test": "^1.23.1",
+    "node-polyfill-webpack-plugin": "2.0.1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.2.1",
+    "@types/lodash": "^4.14.182",
+    "@types/mixpanel-browser": "^2.38.0",
+    "@types/react-color": "^3.0.6",
+    "@types/reactcss": "^1.2.6",
+    "autoprefixer": "^10.4.7",
+    "husky": "^8.0.3",
+    "lint-staged": "^12.5.0",
+    "playwright": "^1.23.1",
+    "prettier": "^2.7.1",
+    "react-test-renderer": "^18.2.0",
+    "ts-node": "^10.8.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npx validate-branch-name && cd ui && rimraf build && npm run precommit"
-    }
-  },
-  "validate-branch-name": {
-    "pattern": "^(feature|bugfix|hotfix)/ESI-[0-9]+-[a-z0-9-]{5,30}$",
-    "errorMsg": "Please add valid branch name!"
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "**/*.{json,css,scss,md,webmanifest}": [
+      "prettier -w"
+    ]
   }
 }
