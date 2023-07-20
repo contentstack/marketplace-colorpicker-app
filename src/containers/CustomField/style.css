@@ -1,0 +1,46 @@
+.config-wrapper .Form__item {
+  width: 500px;
+}
+
+.config-wrapper .tippy-wrapper {
+  margin-right: 10px;
+}
+
+.config-wrapper .radio-wrapper {
+  padding: 20px 10px;
+}
+
+.config-wrapper .radio-button {
+  margin-right: 20px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.config-wrapper .toggle-save-response {
+  padding: 20px 10px;
+}
+
+.swatch {
+  padding: 5px;
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popover {
+  position: absolute;
+  z-index: 2;
+  margin: 7px;
+}
+
+.cover {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}

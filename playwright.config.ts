@@ -1,50 +1,61 @@
-import { defineConfig, devices } from '@playwright/test';
+import type { PlaywrightTestConfig } from "@playwright/test";
+import { devices } from "@playwright/test";
+require("dotenv").config();
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
-
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
-export default defineConfig({
-  testDir: './test/e2e/tests',
-  /* Run tests in files in parallel */
-  fullyParallel: true,
+const config: PlaywrightTestConfig = {
+  /**
+   * globalSetup & teardown of test data
+   */
+  globalSetup: require.resolve("./global-setup"),
+  globalTeardown: require.resolve("./global-teardown"),
+  testDir: "./e2e/tests",
+  timeout: 30 * 10000,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  retries: 2,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [["html", { open: "never" }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    storageState: "storageState.json",
+    actionTimeout: 0,
+    screenshot: "off",
+    video: "off",
+    viewport: { width: 1920, height: 720 },
+    trace: "on-first-retry",
+    baseURL: process.env.ENV_URL,
+    launchOptions: {
+      logger: {
+        isEnabled: () => {
+          return false;
+        },
+        log: (name, severity, message, args) => console.log(`${name}: ${message}`),
+      },
+    },
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: "Chromium",
+      use: {
+        browserName: "chromium",
+      },
     },
-
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: "safari",
+      use: { ...devices["Desktop Safari"] },
     },
-
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: "firefox",
+      use: {
+        browserName: "firefox",
+      },
     },
   ],
-});
+};
+
+export default config;
