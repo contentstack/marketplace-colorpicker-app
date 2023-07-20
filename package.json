@@ -69,6 +69,7 @@
     "@commitlint/config-conventional": "^16.2.4",
     "@cucumber/cucumber": "^8.4.0",
     "@playwright/test": "^1.23.1",
+    "node-polyfill-webpack-plugin": "2.0.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.2.1",
