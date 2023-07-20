@@ -65,7 +65,7 @@ const CustomFieldExtension = () => {
 
   return (
     <div className="layout-container">
-      <div>
+      <div id="color-picker">
         <InstructionText className="text-left" testId="color-picker-text">
           {localeTexts.customField.instruction}
         </InstructionText>
