@@ -44,7 +44,8 @@
     "test:chrome": "npx playwright test --config=playwright.config.ts --project=Chromium",
     "test:firefox": "npx playwright test --config=playwright.config.ts --project=firefox",
     "test:chrome-headed": "npx playwright test --headed --config=playwright.config.ts --project=Chromium",
-    "test:firefox-headed": "npx playwright test --headed --config=playwright.config.ts --project=firefox"
+    "test:firefox-headed": "npx playwright test --headed --config=playwright.config.ts --project=firefox",
+    "test:chrome-debug-headed": "npx playwright test --headed --config=playwright.config.ts --project=Chromium --debug"
   },
   "eslintConfig": {
     "extends": [
