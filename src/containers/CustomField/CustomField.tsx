@@ -54,7 +54,7 @@ const CustomFieldExtension = () => {
   };
 
   useEffect(() => {
-    if (fieldColor) {
+    if (fieldColor && Object.keys(fieldColor).length) {
       setColor((prev) => ({
         showPicker: prev.showPicker,
         pickerColor: fieldColor.rgb,
