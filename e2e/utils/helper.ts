@@ -102,8 +102,13 @@ export const getAuthToken = async () => {
   }
 };
 
+interface AppData {
+  appId: string;
+  appName: string;
+}
+
 // create app in developer hub
-export const createApp = async (authToken: string) => {
+export const createApp = async (authToken: string, randomTestNumber: number): Promise<AppData | any> => {
   let options = {
     url: `https://${DEVELOPER_HUB_API}/apps`,
     method: "POST",
@@ -113,20 +118,21 @@ export const createApp = async (authToken: string) => {
       authtoken: authToken,
     },
     data: {
-      name: `App Boilerplate ${Math.floor(Math.random() * 1000)}`,
+      name: `Color Picker E2E ${randomTestNumber}`,
       target_type: "stack",
     },
   };
   try {
     let result = await axios(options);
-    return result.data.data.uid;
+    return { appId: result.data.data.uid, appName: options.data.name };
   } catch (error) {
     return error;
   }
 };
 
 // updating app in developer hub & set baseUrl
-export const updateApp = async (authToken: string, appId: string) => {
+export const updateApp = async (authToken: string, appId: string, appName: string): Promise<any> => {
+  const name = appName;
   let options = {
     url: `https://${DEVELOPER_HUB_API}/apps/${appId}`,
     method: "PUT",
@@ -198,11 +204,11 @@ export const updateApp = async (authToken: string, appId: string) => {
             type: "cs.cm.stack.custom_field",
             meta: [
               {
-                name: `App Boilerplate _${Math.floor(Math.random() * 1000)}`,
+                name: name,
                 path: "/custom-field",
                 signed: false,
                 enabled: true,
-                data_type: "text",
+                data_type: "json",
               },
             ],
           },
@@ -214,7 +220,9 @@ export const updateApp = async (authToken: string, appId: string) => {
   };
   try {
     let result = await axios(options);
-    return result.data;
+    if (result) {
+      return true;
+    }
   } catch (error) {
     return error;
   }
@@ -300,8 +308,8 @@ export const deleteApp = async (token: string, appId: string) => {
 };
 
 // create content-type
-export const createContentType = async (authToken: string, extension_uid: ExtensionUid[]) => {
-  const generateUid = `Test Content Type_${Math.floor(Math.random() * 1000)}`;
+export const createContentType = async (authToken: string, appName: string, extension_uid: ExtensionUid[]) => {
+  // const contentTypeTitle = `${appName} : Content Type`;
   let options = {
     url: `https://${BASE_API_URL}/v3/content_types`,
     method: "POST",
@@ -312,8 +320,8 @@ export const createContentType = async (authToken: string, extension_uid: Extens
     },
     data: {
       content_type: {
-        title: generateUid,
-        uid: generateUid.replace(/\s/g, "_").toLowerCase(),
+        title: appName,
+        uid: appName.replace(/\s/g, "_").toLowerCase(),
         schema: [
           {
             display_name: "Title",
@@ -337,7 +345,7 @@ export const createContentType = async (authToken: string, extension_uid: Extens
             multiple: false,
           },
           {
-            display_name: "App Boilerplate",
+            display_name: appName,
             uid: "text",
             data_type: "json",
             extension_uid: extension_uid,
@@ -362,8 +370,8 @@ export const createContentType = async (authToken: string, extension_uid: Extens
 };
 
 // create entry
-export const createEntry = async (authToken: string, contentTypeId: string) => {
-  let generateTitle = `Test Entry ${Math.floor(Math.random() * 1000)}`;
+export const createEntry = async (authToken: string, appName: string, contentTypeId: string) => {
+  let generateTitle = `${appName} : Entry`;
   let options = {
     url: `https://${BASE_API_URL}/v3/content_types/${contentTypeId}/entries`,
     params: { locale: "en-us" },
@@ -376,7 +384,13 @@ export const createEntry = async (authToken: string, contentTypeId: string) => {
     data: {
       entry: {
         title: generateTitle,
-        url: "test-entry",
+        showPicker: true,
+        pickerColor: {
+          r: "108",
+          g: "92",
+          b: "231",
+          a: "100",
+        },
       },
     },
   };
