@@ -4,7 +4,6 @@ import { get, isNull } from "lodash";
 import React, { useEffect, useState } from "react";
 import { AppFailed } from "../../components/AppFailed";
 import { MarketplaceAppContext } from "../contexts/marketplaceContext";
-import { useAnalytics } from "../hooks/useAnalytics";
 import { useJSErrorTracking } from "../hooks/useJSErrorTracking";
 import { KeyValueObj } from "../types/types";
 import { getAppLocation } from "../utils/functions";
@@ -23,7 +22,7 @@ export const MarketplaceAppProvider: React.FC<ProviderProps> = ({ children }) =>
   const [appSdk, setAppSdk] = useState<Extension | null>(null);
   const [appConfig, setConfig] = useState<KeyValueObj | null>(null);
   const { setErrorsMetaData, trackError } = useJSErrorTracking();
-  const { trackEvent } = useAnalytics();
+  const ENV: string = process.env.NODE_ENV;
 
   // Initialize the SDK and track analytics event
   useEffect(() => {
@@ -41,12 +40,14 @@ export const MarketplaceAppProvider: React.FC<ProviderProps> = ({ children }) =>
           "User Id": get(appSdk, "stack._data.collaborators.0.uid", ""), //first uuid from collaborators
         };
         setErrorsMetaData(properties); // set global event data for errors
-        trackEvent(eventNames.APP_INITIALIZE_SUCCESS);
+        // skip tracking if env is development
+        if (ENV === "production") {
+          appSdk.pulse(eventNames.APP_INITIALIZE_SUCCESS, properties);
+        }
       })
       .catch((err: Error) => {
         setFailed(true);
         trackError(err);
-        trackEvent(eventNames.APP_INITIALIZE_FAILURE);
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
