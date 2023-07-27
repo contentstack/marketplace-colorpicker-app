@@ -21,5 +21,9 @@ node_modules/
 /**/**/yarn-error.log*
 
 .vercel
-
+.env
 .eslintcache
+
+playwright-report
+
+storageState.json
