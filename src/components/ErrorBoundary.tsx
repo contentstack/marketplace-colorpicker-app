@@ -4,13 +4,13 @@ import { datadogRum } from "@datadog/browser-rum";
 const ENV: string = process.env.NODE_ENV;
 
 datadogRum.init({
-  applicationId: `${process.env.REACT_APP_DATADOG_RUM_APPLICATION_ID}`,
-  clientToken: `${process.env.REACT_APP_DATADOG_RUM_CLIENT_TOKEN}`,
-  site: `${process.env.REACT_APP_DATADOG_RUM_SITE}`,
-  service: `${process.env.REACT_APP_DATADOG_RUM_SERVICE}`,
-  env: `${process.env.REACT_APP_DATADOG_RUM_ENV}`,
+  applicationId: process.env.REACT_APP_DATADOG_RUM_APPLICATION_ID as string,
+  clientToken: process.env.REACT_APP_DATADOG_RUM_CLIENT_TOKEN as string,
+  site: process.env.REACT_APP_DATADOG_RUM_SITE as string,
+  service: process.env.REACT_APP_DATADOG_RUM_SERVICE as string,
+  env: process.env.REACT_APP_DATADOG_RUM_ENV as string,
   // Specify a version number to identify the deployed version of your application in Datadog
-  // version: '1.0.0',
+  version: "1.1.0",
   sessionSampleRate: 100,
   sessionReplaySampleRate: 20,
   trackUserInteractions: true,
