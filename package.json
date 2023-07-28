@@ -6,7 +6,7 @@
     "dist"
   ],
   "dependencies": {
-    "@contentstack/app-sdk": "^1.5.0",
+    "@contentstack/app-sdk": "^1.6.0",
     "@contentstack/venus-components": "2.0.1",
     "@datadog/browser-rum": "^4.45.0",
     "@types/jest": "^29.4.0",
@@ -76,7 +76,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.2.1",
     "@types/lodash": "^4.14.182",
-    "@types/mixpanel-browser": "^2.38.0",
     "@types/react-color": "^3.0.6",
     "@types/reactcss": "^1.2.6",
     "autoprefixer": "^10.4.7",
