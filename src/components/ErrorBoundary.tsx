@@ -10,7 +10,7 @@ datadogRum.init({
   service: process.env.REACT_APP_DATADOG_RUM_SERVICE as string,
   env: process.env.REACT_APP_DATADOG_RUM_ENV as string,
   // Specify a version number to identify the deployed version of your application in Datadog
-  // version: '1.0.0',
+  version: "1.1.0",
   sessionSampleRate: 100,
   sessionReplaySampleRate: 20,
   trackUserInteractions: true,
