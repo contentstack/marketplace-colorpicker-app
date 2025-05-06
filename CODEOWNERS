@@ -8,3 +8,5 @@
 .github/workflows/policy-scan.yml @contentstack/security-admin
 
 .github/workflows/issues-jira.yml @contentstack/security-admin
+
+.github/workflows/secrets-scan.yml @contentstack/security-admin
