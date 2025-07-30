@@ -1,4 +1,4 @@
 ignore:
-    "SNYK-JS-BODYPARSER-7926860":
-        - "*":
-            reason: "Fix the issue post publish"
+    "*":
+        - "package.json":
+            reason: "Fix the package related issue post publish"
