@@ -1,4 +1,4 @@
 ignore:
-    "*":
-        - "package.json":
+    "SNYK-JS-DOMPURIFY-8722251":
+        - "*":
             reason: "Fix the package related issue post publish"
