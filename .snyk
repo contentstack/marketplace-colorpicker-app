@@ -1,0 +1,4 @@
+ignore:
+    "SNYK-JS-BODYPARSER-7926860":
+        - "*":
+            reason: "Fix the issue post publish"
