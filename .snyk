@@ -1,4 +1,4 @@
 ignore:
-    "SNYK-JS-DOMPURIFY-8722251":
+    "SNYK-JS-AXIOS-*":
         - "*":
             reason: "Fix the package related issue post publish"
