@@ -1,7 +1,26 @@
 {
   "name": "marketplace-colorpicker-app",
   "version": "1.1.0",
-  "private": true,
+  "description": "A modern, accessible color picker custom field app for Contentstack marketplace",
+  "keywords": [
+    "contentstack",
+    "marketplace",
+    "color-picker",
+    "react",
+    "typescript",
+    "custom-field",
+    "accessibility"
+  ],
+  "author": "Contentstack",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contentstack/marketplace-colorpicker-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/contentstack/marketplace-colorpicker-app/issues"
+  },
+  "homepage": "https://github.com/contentstack/marketplace-colorpicker-app#readme",
   "files": [
     "dist"
   ],
