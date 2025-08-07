@@ -20,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/contentstack/marketplace-colorpicker-app/issues"
   },
-  "homepage": "https://github.com/contentstack/marketplace-colorpicker-app#readme",
   "files": [
     "dist"
   ],
