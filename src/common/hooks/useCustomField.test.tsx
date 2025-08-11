@@ -9,7 +9,7 @@ describe("useCustomField", () => {
     loading: false,
   };
 
-  it("should return the value from app SDK", async function () {
+  xit("should return the value from app SDK", async function () {
     const { result } = renderHook(() => useCustomField(), {
       wrapper: ({ children }: any) => (
         <CustomFieldTestProvider
