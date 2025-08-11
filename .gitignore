@@ -10,6 +10,7 @@ node_modules/
 /api/build
 /ui/build
 /to-deploy
+build
 
 # misc
 .DS_Store
