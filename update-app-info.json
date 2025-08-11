@@ -1,20 +1,20 @@
 {
-	"name": "Colour Picker",
-	"target_type": "stack",
-	"ui_location": {
-		"locations": [
-			{
-				"type": "cs.cm.stack.custom_field",
-				"meta": [
-					{
-						"signed": true,
-						"path": "/custom-field",
-						"data_type": "json"
-					}
-				]
-			}
-		],
-		"signed": true,
-		"base_url": "https://6506-223-226-16-186.ngrok.io"
-	}
+  "name": "Colour Picker",
+  "target_type": "stack",
+  "ui_location": {
+    "locations": [
+      {
+        "type": "cs.cm.stack.custom_field",
+        "meta": [
+          {
+            "signed": true,
+            "path": "/custom-field",
+            "data_type": "json"
+          }
+        ]
+      }
+    ],
+    "signed": true,
+    "base_url": "/"
+  }
 }
