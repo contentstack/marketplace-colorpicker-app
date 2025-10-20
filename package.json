@@ -99,7 +99,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^12.5.0",
     "node-polyfill-webpack-plugin": "2.0.1",
-    "playwright": "^1.25.0",
+    "playwright": "^1.55.1",
     "prettier": "^2.7.1"
   },
   "lint-staged": {
