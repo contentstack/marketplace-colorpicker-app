@@ -124,6 +124,7 @@
     "postcss": "^8.4.31",
     "semver": "^7.5.2",
     "serialize-javascript": "^6.0.2",
-    "sha.js": "^2.4.12"
+    "sha.js": "^2.4.12",
+    "webpack-dev-server": "5.2.1"
   }
 }
