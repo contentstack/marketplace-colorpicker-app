@@ -2,7 +2,7 @@ import { each } from "lodash";
 import { useCallback } from "react";
 import { datadogRum } from "@datadog/browser-rum";
 
-const ENV: string = process.env.NODE_ENV;
+const ENV: string = import.meta.env.MODE;
 
 /**
  * Returns functions to track errors manually
@@ -15,12 +15,12 @@ export const useJSErrorTracking = () => {
      * Skip tracking if env = development
      * but log the error to view in console
      */
-    trackError: useCallback((error: any) => {
+    trackError: useCallback((error: unknown) => {
       if (ENV === "development") {
         return;
       }
       //error tracking by dataDog RUM
-      datadogRum.addError(error);
+      datadogRum.addError(error as Error);
     }, []),
 
     /**
@@ -28,8 +28,8 @@ export const useJSErrorTracking = () => {
      * Use only global properties
      */
     setErrorsMetaData: useCallback((properties: { [key: string]: string }) => {
-      each(properties, (key, value) => {
-        datadogRum.setGlobalContextProperty(value, key);
+      each(properties, (value, key) => {
+        datadogRum.setGlobalContextProperty(key, value);
       });
     }, []),
   };

@@ -22,7 +22,7 @@ function App() {
           <Route
             path="/custom-field"
             element={
-              <Suspense>
+              <Suspense fallback={<div>Loading...</div>}>
                 <CustomFieldExtensionProvider>
                   <CustomFieldExtension />
                 </CustomFieldExtensionProvider>
