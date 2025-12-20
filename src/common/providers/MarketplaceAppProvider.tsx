@@ -22,7 +22,7 @@ export const MarketplaceAppProvider: React.FC<ProviderProps> = ({ children }) =>
   const [appSdk, setAppSdk] = useState<Extension | null>(null);
   const [appConfig, setConfig] = useState<KeyValueObj | null>(null);
   const { setErrorsMetaData, trackError } = useJSErrorTracking();
-  const ENV: string = process.env.NODE_ENV;
+  const ENV: string = import.meta.env.MODE;
 
   // Initialize the SDK and track analytics event
   useEffect(() => {
@@ -33,7 +33,7 @@ export const MarketplaceAppProvider: React.FC<ProviderProps> = ({ children }) =>
         setConfig(appConfig);
         appSdk.location.CustomField?.frame?.updateHeight?.(350);
         const appLocation: string = getAppLocation(appSdk);
-        let properties = {
+        const properties = {
           Stack: appSdk?.stack._data.api_key,
           Organization: appSdk?.currentUser.defaultOrganization,
           "App Location": appLocation,

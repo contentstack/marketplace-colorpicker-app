@@ -1,13 +1,13 @@
 import { useCallback } from "react";
 import { useAppSdk } from "./useAppSdk";
 
-const ENV: string = process.env.NODE_ENV;
+const ENV: string = import.meta.env.MODE;
 
 /**
  * Initialise Heap
  */
 
-type AnalyticsApi = { trackEvent: Function };
+type AnalyticsApi = { trackEvent: (event: string, eventData?: { [key: string]: string }) => void };
 
 /**
  * useAnalytics hook to track user actions and events in application
