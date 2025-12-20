@@ -1,14 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { datadogRum } from "@datadog/browser-rum";
 
-const ENV: string = process.env.NODE_ENV;
+const ENV: string = import.meta.env.MODE;
 
 datadogRum.init({
-  applicationId: process.env.REACT_APP_DATADOG_RUM_APPLICATION_ID as string,
-  clientToken: process.env.REACT_APP_DATADOG_RUM_CLIENT_TOKEN as string,
-  site: process.env.REACT_APP_DATADOG_RUM_SITE as string,
-  service: process.env.REACT_APP_DATADOG_RUM_SERVICE as string,
-  // env: process.env.REACT_APP_DATADOG_RUM_ENV as string,
+  applicationId: import.meta.env.VITE_DATADOG_RUM_APPLICATION_ID as string,
+  clientToken: import.meta.env.VITE_DATADOG_RUM_CLIENT_TOKEN as string,
+  site: import.meta.env.VITE_DATADOG_RUM_SITE as string,
+  service: import.meta.env.VITE_DATADOG_RUM_SERVICE as string,
+  // env: import.meta.env.VITE_DATADOG_RUM_ENV as string,
   // Specify a version number to identify the deployed version of your application in Datadog
   version: "1.1.0",
   sessionSampleRate: 100,
@@ -27,7 +28,10 @@ datadogRum.setGlobalContextProperty("Application Name", "Color Picker App");
  * Global Error Boundary component
  * Errors are logged on to TrackJS service
  */
-export class ErrorBoundary extends React.Component {
+export class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
+  static propTypes = {
+    children: PropTypes.node,
+  };
   state: { hasError: boolean };
 
   constructor(props: { children: React.ReactNode }) {
@@ -35,12 +39,12 @@ export class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error) {
+  static getDerivedStateFromError() {
     // Update state so the next render will show the fallback UI.
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: any) {
+  componentDidCatch(error: Error) {
     // You can also log the error to an error reporting service
     if (ENV === "development") {
       console.error(error);
@@ -55,7 +59,6 @@ export class ErrorBoundary extends React.Component {
       return <h1>Something went wrong.</h1>;
     }
 
-    // @ts-ignore
     return this.props.children;
   }
 }
