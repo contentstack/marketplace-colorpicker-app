@@ -38,7 +38,7 @@
     "react": "^18.2.0",
     "react-color": "2.19.3",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.3",
+    "react-router-dom": "^6.30.3",
     "reactcss": "1.2.3",
     "typescript": "^4.9.3",
     "web-vitals": "^3.1.0"
