@@ -53,8 +53,9 @@ export class EntryPage {
   }
 
   // Check for entry custom field & entry side bar
-  async ValidateColorPicker(appName: string) {
+  async ValidateColorPickerField() {
     await this.page.waitForTimeout(3000);
+    const appName = "Color Picker";
 
     const frame: FrameLocator = this.page.frameLocator(
       `iframe[title="${initParams.customFieldTitlePrefix}${appName}"]`
