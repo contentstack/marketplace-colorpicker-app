@@ -438,7 +438,7 @@ export const getExtensionFieldUid = async (authToken: string) => {
   };
   try {
     let result = await axios(options);
-    return result.data.extensions[0].uid;
+    return result.data.extensions[1].uid;
   } catch (error) {
     console.error(error);
   }

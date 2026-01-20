@@ -31,3 +31,6 @@ storageState.json
 data.json
 
 dist/
+
+test-results/
+.DS_Store

@@ -77,6 +77,6 @@ test("#1 Validate Color Picker", async ({ page, context }) => {
   const { appName } = savedCredentials;
   const entryPage = await initializeEntry(page);
   await entryPageFlow(savedCredentials, entryPage);
-  await entryPage.ValidateColorPicker(appName);
+  await entryPage.ValidateColorPickerField();
   await entryPage.interactColorPicker();
 });
