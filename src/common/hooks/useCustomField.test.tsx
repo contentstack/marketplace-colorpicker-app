@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { renderHook, waitFor } from "@testing-library/react";
 import { CustomFieldTestProvider } from "../../test-utils/test-utils";
 import { useCustomField } from "./useCustomField";
@@ -5,13 +6,13 @@ import { useCustomField } from "./useCustomField";
 describe("useCustomField", () => {
   const customField = {
     customField: "Hello",
-    setFieldData: jest.fn(),
+    setFieldData: jest.fn(async () => {}),
     loading: false,
   };
 
   xit("should return the value from app SDK", async function () {
     const { result } = renderHook(() => useCustomField(), {
-      wrapper: ({ children }: any) => (
+      wrapper: ({ children }: { children: ReactNode }) => (
         <CustomFieldTestProvider
           customField={customField.customField}
           setFieldData={customField.setFieldData}
@@ -22,7 +23,7 @@ describe("useCustomField", () => {
     });
 
     await waitFor(() => {
-      expect(result.current.customField).toBe("Hello");
+      expect(result.current[0]).toBe("Hello");
     });
   });
 });
