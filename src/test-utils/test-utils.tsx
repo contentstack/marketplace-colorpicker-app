@@ -1,18 +1,25 @@
+import type { ReactElement, ReactNode } from "react";
 import React from "react";
+import type Extension from "@contentstack/app-sdk/dist/src/extension";
 import { render } from "@testing-library/react";
 import { MarketplaceAppContext } from "../common/contexts/marketplaceContext";
 import { CustomFieldExtensionContext } from "../common/contexts/customFieldExtensionContext";
+import type { KeyValueObj } from "../common/types/types";
 
 export const TestProvider = ({
   children,
   appSdk,
-  appConfig = {},
+  appConfig = {} as KeyValueObj,
 }: {
-  appConfig: any;
-  children?: React.ReactNode;
-  appSdk: any;
+  appConfig?: KeyValueObj;
+  children?: ReactNode;
+  appSdk: Extension | null;
 }) => {
-  return <MarketplaceAppContext.Provider value={{ appSdk, appConfig }}>{children}</MarketplaceAppContext.Provider>;
+  return (
+    <MarketplaceAppContext.Provider value={{ appSdk, appConfig: appConfig ?? null }}>
+      {children}
+    </MarketplaceAppContext.Provider>
+  );
 };
 
 export const CustomFieldTestProvider = ({
@@ -21,10 +28,10 @@ export const CustomFieldTestProvider = ({
   loading = false,
   setFieldData,
 }: {
-  customField: any;
-  children?: React.ReactNode;
+  customField: unknown;
+  children?: ReactNode;
   loading: boolean;
-  setFieldData: (data: unknown) => void;
+  setFieldData: (data: unknown) => Promise<void>;
 }) => {
   return (
     <CustomFieldExtensionContext.Provider value={{ customField, loading, setFieldData }}>
@@ -33,18 +40,23 @@ export const CustomFieldTestProvider = ({
   );
 };
 
-const AllTheProviders = ({ children, initialProps }: any) => {
+const AllTheProviders = ({
+  children,
+  initialProps,
+}: {
+  children?: ReactNode;
+  initialProps?: { appConfig?: KeyValueObj; appSdk?: Extension | null };
+}) => {
   return (
-    <TestProvider appConfig={initialProps?.appConfig} appSdk={initialProps?.appSdk}>
+    <TestProvider appConfig={initialProps?.appConfig ?? {}} appSdk={initialProps?.appSdk ?? null}>
       {children}
     </TestProvider>
   );
 };
 
-const customRender = (ui: any, options?: object) => render(ui, { wrapper: AllTheProviders, ...options });
+const customRender = (ui: ReactElement, options?: object) => render(ui, { wrapper: AllTheProviders, ...options });
 
 // re-export everything
-//@ts-ignore
 export * from "@testing-library/react";
 
 // override render method

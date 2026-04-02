@@ -1,17 +1,14 @@
 import { useContext } from "react";
-import { CustomFieldExtensionContext, CustomFieldExtensionContextType } from "../contexts/customFieldExtensionContext";
+import { CustomFieldExtensionContext } from "../contexts/customFieldExtensionContext";
 
 /**
  * Getter and setter hook for custom field data
- * @returns an object { customField, setFieldData, loading };
+ * @returns tuple [customField, setFieldData, loading]
  *
  * Eg:
- * const { customField, setFieldData, loading } = useCustomField();
+ * const [customField, setFieldData, loading] = useCustomField();
  */
-export const useCustomField = () => {
-  const { customField, setFieldData, loading } = useContext(
-    CustomFieldExtensionContext
-  ) as CustomFieldExtensionContextType;
-
-  return [customField, setFieldData, loading] as any;
+export const useCustomField = (): [unknown, (data: unknown) => Promise<void>, boolean] => {
+  const { customField, setFieldData, loading } = useContext(CustomFieldExtensionContext);
+  return [customField, setFieldData, loading];
 };
