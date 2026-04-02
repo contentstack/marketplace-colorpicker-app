@@ -7,7 +7,7 @@ import { useMemo } from "react";
  * based on active location
  * @return {locationName, location}
  */
-export const useAppLocation = (): { locationName: string; location: any } => {
+export const useAppLocation = (): { locationName: string; location: unknown } => {
   const appSdk = useAppSdk();
   const locations = useMemo(() => keys(appSdk?.location), [appSdk]);
 

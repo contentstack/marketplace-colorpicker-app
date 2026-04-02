@@ -20,7 +20,11 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    // tsconfig uses "jsx": "react-jsx" — no need to import React for JSX
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-require-imports": "off",
+  },
 };
 
 

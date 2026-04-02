@@ -1,19 +1,21 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { useAppLocation } from "../hooks/useAppLocation";
 import { isEmpty } from "lodash";
 import { CustomFieldExtensionContext } from "../contexts/customFieldExtensionContext";
+import type { CustomFieldLocation } from "../types/customFieldSdk";
 
-export const CustomFieldExtensionProvider = ({ children }: any) => {
+export const CustomFieldExtensionProvider = ({ children }: { children: ReactNode }) => {
   const [customField, setCustomField] = useState<unknown>(null);
   const [loading, setLoading] = useState<boolean>(false);
-  const { location } = useAppLocation();
+  const { location: locationUnknown } = useAppLocation();
+  const location = locationUnknown as CustomFieldLocation;
 
   useEffect(() => {
     (async () => {
       // check if the data was loaded earlier or not
       if (isEmpty(customField)) {
         setLoading(true);
-        let fieldData = await location.field.getData();
+        const fieldData = await location.field.getData();
         setCustomField(fieldData);
         setLoading(false);
       }

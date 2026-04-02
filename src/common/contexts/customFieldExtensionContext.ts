@@ -2,12 +2,12 @@ import React from "react";
 
 export type CustomFieldExtensionContextType = {
   customField: unknown;
-  setFieldData: (data: unknown) => void;
+  setFieldData: (data: unknown) => Promise<void>;
   loading: boolean;
 };
 
 export const CustomFieldExtensionContext = React.createContext<CustomFieldExtensionContextType>({
   customField: null,
-  setFieldData: () => {},
+  setFieldData: async () => {},
   loading: false,
 });

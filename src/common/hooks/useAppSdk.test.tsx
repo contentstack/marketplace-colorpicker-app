@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+import type Extension from "@contentstack/app-sdk/dist/src/extension";
 import { renderHook } from "@testing-library/react";
 import { TestProvider } from "../../test-utils/test-utils";
 import { useAppSdk } from "./useAppSdk";
@@ -14,8 +16,8 @@ test("useAppSdk", async () => {
     },
   };
   const { result } = renderHook(() => useAppSdk(), {
-    wrapper: ({ children }: any) => (
-      <TestProvider appConfig={{}} appSdk={appSdkMock}>
+    wrapper: ({ children }: { children: ReactNode }) => (
+      <TestProvider appConfig={{}} appSdk={appSdkMock as unknown as Extension}>
         {children}
       </TestProvider>
     ),
