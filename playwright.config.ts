@@ -28,10 +28,12 @@ const config: PlaywrightTestConfig = {
     trace: "on-first-retry",
     baseURL: process.env.ENV_URL,
     launchOptions: {
+      args: ["--disable-web-security", "--allow-running-insecure-content"],
       logger: {
         isEnabled: () => {
           return false;
         },
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         log: (name, severity, message, args) => console.log(`${name}: ${message}`),
       },
     },

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- legacy shared types; prefer narrowing at call sites */
 export interface KeyValueObj {
   [key: string]: string;
 }

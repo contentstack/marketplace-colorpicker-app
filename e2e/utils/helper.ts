@@ -11,11 +11,12 @@ interface ExtensionUid {
   uid: string;
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const { STACK_API_KEY, ORG_ID, APP_BASE_URL, EMAIL, PASSWORD, DEVELOPER_HUB_API, BASE_API_URL }: any = process.env;
 
 const file = "data.json";
 
-const savedObj: any = {};
+const savedObj: Record<string, string> = {};
 
 // initialize entry class
 export const initializeEntry = async (page: Page) => {
@@ -23,19 +24,22 @@ export const initializeEntry = async (page: Page) => {
 };
 
 // entry page access
-export const entryPageFlow = async (savedCredentials: { contentTypeId: any; entryUid: any }, entryPage: EntryPage) => {
+export const entryPageFlow = async (
+  savedCredentials: { contentTypeId: string; entryUid: string },
+  entryPage: EntryPage
+) => {
   //navigate to stacks page
   const { contentTypeId, entryUid } = savedCredentials;
   await entryPage.navigateToEntry(STACK_API_KEY, contentTypeId, entryUid);
 };
 
-const writeFile = async (obj: any) => {
+const writeFile = async (obj: Record<string, string>) => {
   jsonfile
     .writeFile(file, obj)
-    .then((res: any) => {
+    .then((res: unknown) => {
       return res;
     })
-    .catch((error: any) => console.error(error));
+    .catch((error: unknown) => console.error(error));
 };
 
 // Upload an asset to the stack
@@ -44,7 +48,7 @@ export const assetUpload = async (stackApiKey: string | undefined, authToken: st
   const readFile = await fs.createReadStream(assetPath);
   const form = new FormData();
   form.append("asset[upload]", readFile, "test-asset");
-  let options = {
+  const options = {
     headers: {
       "Content-Type": "multipart/form-data",
       api_key: stackApiKey,
@@ -61,7 +65,7 @@ export const assetUpload = async (stackApiKey: string | undefined, authToken: st
 };
 
 export const deleteAsset = async (authToken: string, assetUid: string) => {
-  let options = {
+  const options = {
     url: `https://${BASE_API_URL}/v3/assets/${assetUid}`,
     method: "DELETE",
     headers: {
@@ -79,7 +83,7 @@ export const deleteAsset = async (authToken: string, assetUid: string) => {
 
 // get authtoken
 export const getAuthToken = async () => {
-  let options = {
+  const options = {
     url: `https://${BASE_API_URL}/v3/user-session`,
     method: "POST",
     headers: {
@@ -93,7 +97,7 @@ export const getAuthToken = async () => {
     },
   };
   try {
-    let result = await axios(options);
+    const result = await axios(options);
     savedObj["authToken"] = result.data.user.authtoken;
     await writeFile(savedObj);
     return result.data.user.authtoken;
@@ -108,8 +112,8 @@ interface AppData {
 }
 
 // create app in developer hub
-export const createApp = async (authToken: string, randomTestNumber: number): Promise<AppData | any> => {
-  let options = {
+export const createApp = async (authToken: string, randomTestNumber: number): Promise<AppData> => {
+  const options = {
     url: `https://${DEVELOPER_HUB_API}/apps`,
     method: "POST",
     headers: {
@@ -120,91 +124,12 @@ export const createApp = async (authToken: string, randomTestNumber: number): Pr
     data: {
       name: `Color Picker E2E ${randomTestNumber}`,
       target_type: "stack",
-    },
-  };
-  try {
-    let result = await axios(options);
-    return { appId: result.data.data.uid, appName: options.data.name };
-  } catch (error) {
-    return error;
-  }
-};
-
-// updating app in developer hub & set baseUrl
-export const updateApp = async (authToken: string, appId: string, appName: string): Promise<any> => {
-  const name = appName;
-  let options = {
-    url: `https://${DEVELOPER_HUB_API}/apps/${appId}`,
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      organization_uid: ORG_ID,
-      authtoken: authToken,
-    },
-    data: {
       ui_location: {
         locations: [
-          {
-            type: "cs.cm.stack.sidebar",
-            meta: [
-              {
-                name: `Entry sidebar _${Math.floor(Math.random() * 1000)}`,
-                enabled: true,
-                path: "/entry-sidebar",
-                signed: false,
-              },
-            ],
-          },
-          {
-            type: "cs.cm.stack.dashboard",
-            meta: [
-              {
-                name: `Stack Dashboard Boilerplate _${Math.floor(Math.random() * 1000)}`,
-                path: "/stack-dashboard",
-                signed: false,
-                enabled: true,
-                default_width: "full",
-              },
-            ],
-          },
-          {
-            type: "cs.cm.stack.asset_sidebar",
-            meta: [
-              {
-                name: `Asset Sidebar Boilerplate _${Math.floor(Math.random() * 1000)}`,
-                path: "/asset-sidebar",
-                signed: false,
-                enabled: true,
-                width: 500,
-              },
-            ],
-          },
-          {
-            type: "cs.cm.stack.rte",
-            meta: [
-              {
-                name: `JsonRte Boilerplate _${Math.floor(Math.random() * 1000)}`,
-                enabled: true,
-                path: "/json-rte.js",
-              },
-            ],
-          },
-          {
-            type: "cs.cm.stack.config",
-            meta: [
-              {
-                name: `App Boilerplate _${Math.floor(Math.random() * 1000)}`,
-                path: "/app-configuration",
-                signed: false,
-                enabled: true,
-              },
-            ],
-          },
           {
             type: "cs.cm.stack.custom_field",
             meta: [
               {
-                name: name,
                 path: "/custom-field",
                 signed: false,
                 enabled: true,
@@ -216,21 +141,19 @@ export const updateApp = async (authToken: string, appId: string, appName: strin
         signed: true,
         base_url: APP_BASE_URL,
       },
+      hosting: {
+        provider: "external",
+        deployment_url: APP_BASE_URL,
+      },
     },
   };
-  try {
-    let result = await axios(options);
-    if (result) {
-      return true;
-    }
-  } catch (error) {
-    return error;
-  }
+  const result = await axios(options);
+  return { appId: result.data.data.uid, appName: options.data.name };
 };
 
 // get installed app
 export const getInstalledApp = async (authToken: string, appId: string) => {
-  let options = {
+  const options = {
     url: `https://${DEVELOPER_HUB_API}/apps/${appId}/installations`,
     method: "GET",
     headers: {
@@ -249,7 +172,7 @@ export const getInstalledApp = async (authToken: string, appId: string) => {
 
 // install app in stack & return installation id
 export const installApp = async (authToken: string, appId: string, stackApiKey: string | undefined) => {
-  let options = {
+  const options = {
     url: `https://${DEVELOPER_HUB_API}/apps/${appId}/install`,
     method: "POST",
     headers: {
@@ -263,7 +186,7 @@ export const installApp = async (authToken: string, appId: string, stackApiKey: 
     },
   };
   try {
-    let result = await axios(options);
+    const result = await axios(options);
     return result.data.data.installation_uid;
   } catch (error) {
     return error;
@@ -272,7 +195,7 @@ export const installApp = async (authToken: string, appId: string, stackApiKey: 
 
 // uninstall app from the stack
 export const uninstallApp = async (authToken: string, installId: string) => {
-  let options = {
+  const options = {
     url: `https://${DEVELOPER_HUB_API}/installations/${installId}`,
     method: "DELETE",
     headers: {
@@ -282,7 +205,7 @@ export const uninstallApp = async (authToken: string, installId: string) => {
     },
   };
   try {
-    let result = await axios(options);
+    const result = await axios(options);
     return result.data;
   } catch (error) {
     return error;
@@ -291,7 +214,7 @@ export const uninstallApp = async (authToken: string, installId: string) => {
 
 // deletes the created test app during tear down
 export const deleteApp = async (token: string, appId: string) => {
-  let options = {
+  const options = {
     url: `https://${DEVELOPER_HUB_API}/apps/${appId}`,
     method: "DELETE",
     headers: {
@@ -309,8 +232,7 @@ export const deleteApp = async (token: string, appId: string) => {
 
 // create content-type
 export const createContentType = async (authToken: string, appName: string, extension_uid: ExtensionUid[]) => {
-  // const contentTypeTitle = `${appName} : Content Type`;
-  let options = {
+  const options = {
     url: `https://${BASE_API_URL}/v3/content_types`,
     method: "POST",
     headers: {
@@ -362,7 +284,7 @@ export const createContentType = async (authToken: string, appName: string, exte
     },
   };
   try {
-    let result = await axios(options);
+    const result = await axios(options);
     return result.data;
   } catch (error) {
     return error;
@@ -371,8 +293,8 @@ export const createContentType = async (authToken: string, appName: string, exte
 
 // create entry
 export const createEntry = async (authToken: string, appName: string, contentTypeId: string) => {
-  let generateTitle = `${appName} : Entry`;
-  let options = {
+  const generateTitle = `${appName} : Entry`;
+  const options = {
     url: `https://${BASE_API_URL}/v3/content_types/${contentTypeId}/entries`,
     params: { locale: "en-us" },
     method: "POST",
@@ -395,7 +317,7 @@ export const createEntry = async (authToken: string, appName: string, contentTyp
     },
   };
   try {
-    let result = await axios(options);
+    const result = await axios(options);
     return result.data;
   } catch (error) {
     return error;
@@ -404,7 +326,7 @@ export const createEntry = async (authToken: string, appName: string, contentTyp
 
 // deletes the created content type during tear down
 export const deleteContentType = async (token: string, contentTypeId: string) => {
-  let options = {
+  const options = {
     url: `https://${BASE_API_URL}/v3/content_types/${contentTypeId}`,
     method: "DELETE",
     headers: {
@@ -421,8 +343,8 @@ export const deleteContentType = async (token: string, contentTypeId: string) =>
 };
 
 // get list of apps/extension IDs
-export const getExtensionFieldUid = async (authToken: string) => {
-  let options = {
+export const getExtensionFieldUid = async (authToken: string, appName: string) => {
+  const options = {
     url: `https://${BASE_API_URL}/v3/extensions`,
     method: "GET",
     params: {
@@ -436,10 +358,7 @@ export const getExtensionFieldUid = async (authToken: string) => {
       authtoken: authToken,
     },
   };
-  try {
-    let result = await axios(options);
-    return result.data.extensions[1].uid;
-  } catch (error) {
-    console.error(error);
-  }
+  const result = await axios(options);
+  return result.data.extensions.find((extension: { title: string; uid: string }) => extension.title === appName)?.uid;
 };
+/* eslint-enable @typescript-eslint/no-explicit-any */
