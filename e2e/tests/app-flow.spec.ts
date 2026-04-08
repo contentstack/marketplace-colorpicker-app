@@ -71,7 +71,7 @@ test.afterAll(async () => {
 test("#1 Validate Color Picker", async ({ page }) => {
   const { appName } = savedCredentials;
   const entryPage = await initializeEntry(page);
-  await entryPageFlow(savedCredentials, entryPage);
+  await entryPageFlow(savedCredentials as { contentTypeId: string; entryUid: string }, entryPage);
   await entryPage.ValidateColorPickerField(appName);
   await entryPage.interactColorPicker(appName);
 });
