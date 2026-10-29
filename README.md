@@ -13,12 +13,12 @@ A modern, accessible color picker custom field extension for Contentstack market
 - **Accessibility**: Full keyboard navigation and screen reader support
 - **TypeScript**: Fully typed for better development experience
 - **Responsive Design**: Works across different screen sizes
-- **Testing**: Comprehensive test suite with Playwright for E2E testing
-- **Modern UI**: Clean, professional interface using Contentstack's Venus components
+- **Testing**: Vitest unit tests (`npm run test:coverage`, 90% threshold) and Playwright for E2E testing
+- **Modern UI**: A compact swatch that opens the react-color picker
 
 ## 📋 Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js 22.12 or higher (`engines`)
 - npm
 - Contentstack account (for marketplace deployment)
 
@@ -54,7 +54,7 @@ npm run test:chrome
 # Build the application
 npm run build
 
-# The built files will be in the `dist` directory
+# The built files will be in the `build` directory
 ```
 
 ## 🏗️ Project Structure
@@ -89,6 +89,7 @@ This project includes comprehensive testing:
 ```bash
 npm test                    # Run unit tests
 npm run test:watch         # Run tests in watch mode
+npm run test:coverage      # Run with coverage thresholds
 ```
 
 ### E2E Tests
@@ -112,12 +113,11 @@ npm run format            # Format code with Prettier
 
 ### Environment Variables
 
-Create a `.env` file in the root directory:
+Only the Playwright E2E suite reads a `.env` file (copy `.env.sample`): `EMAIL`, `PASSWORD`, `ORG_ID`, `STACK_API_KEY`, `APP_BASE_URL`, `BASIC_AUTH_USERNAME`, `BASIC_AUTH_PASSWORD`, `DEVELOPER_HUB_API`, `ENV_URL`, `BASE_API_URL`. The app itself optionally reads `VITE_DATADOG_RUM_APPLICATION_ID`, `VITE_DATADOG_RUM_CLIENT_TOKEN`, `VITE_DATADOG_RUM_SITE` and `VITE_DATADOG_RUM_SERVICE` for error tracking.
 
-```env
-REACT_APP_STACK_API_KEY=your_stack_api_key
-REACT_APP_ENVIRONMENT=your_environment
-```
+### Saved data
+
+The field saves the whole react-color `ColorResult` object, for example `{ "hex": "#6c5ce7", "rgb": { "r": 108, "g": 92, "b": 231, "a": 1 }, "hsl": {...}, "hsv": {...} }`. When nothing is saved the swatch shows rgb(108, 92, 231).
 
 ### App Configuration
 
@@ -134,7 +134,7 @@ The app configuration is defined in `update-app-info.json`:
         "meta": [
           {
             "signed": true,
-            "path": "/custom-field",
+            "path": "/#/custom-field",
             "data_type": "json"
           }
         ]
@@ -179,7 +179,7 @@ test: add unit tests for color validation
 ### Contentstack Marketplace
 
 1. Build the application: `npm run build`
-2. Package the `dist` directory
+2. Package the `build` directory
 3. Upload to Contentstack marketplace
 4. Install in your Contentstack stack
 
