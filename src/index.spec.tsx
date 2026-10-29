@@ -38,5 +38,7 @@ describe("entry", () => {
     window.history.pushState({}, "", "/custom-field?a=1");
     await import("./index");
     expect(window.location.hash).toBe("#/custom-field?a=1");
+    // let the async render finish before jsdom is torn down
+    await vi.waitFor(() => expect(document.querySelector("#color-picker .swatch")).not.toBeNull());
   });
 });
