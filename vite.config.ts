@@ -17,7 +17,7 @@ export default defineConfig({
         "src/test-utils/**",
         "src/common/types/**",
       ],
-      thresholds: { lines: 90, branches: 90, functions: 90, statements: 90 },
+      thresholds: { lines: 99, branches: 96, functions: 100, statements: 99 },
     },
   },
   build: {
