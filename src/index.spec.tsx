@@ -1,4 +1,5 @@
 import ContentstackAppSDK from "@contentstack/app-sdk";
+import { fakeId } from "./test-utils/sdk";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 vi.mock("@contentstack/app-sdk", () => ({ default: { init: vi.fn() } }));
@@ -19,7 +20,7 @@ describe("entry", () => {
       },
       getConfig: vi.fn().mockResolvedValue({}),
       pulse: vi.fn(),
-      stack: { _data: { api_key: "k" } },
+      stack: { _data: { api_key: fakeId("stack") } },
       currentUser: { defaultOrganization: "o" },
     } as never);
     document.body.innerHTML = '<div id="root"></div>';
