@@ -2,7 +2,7 @@ import ContentstackAppSDK from "@contentstack/app-sdk";
 import { render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { datadogRum } from "@datadog/browser-rum";
-import { makeSdk } from "../../test-utils/sdk";
+import { fakeId, makeSdk } from "../../test-utils/sdk";
 import { useAppSdk } from "../hooks/useAppSdk";
 import { MarketplaceAppProvider } from "./MarketplaceAppProvider";
 
@@ -32,7 +32,7 @@ describe("MarketplaceAppProvider", () => {
     vi.mocked(ContentstackAppSDK.init).mockResolvedValue(sdk as never);
     render(<MarketplaceAppProvider />);
     await waitFor(() => expect(sdk.location.CustomField.frame.updateHeight).toHaveBeenCalledWith(350));
-    expect(datadogRum.setGlobalContextProperty).toHaveBeenCalledWith("Stack", "key");
+    expect(datadogRum.setGlobalContextProperty).toHaveBeenCalledWith("Stack", fakeId("stack"));
     expect(datadogRum.setGlobalContextProperty).toHaveBeenCalledWith("Organization", "org");
     expect(datadogRum.setGlobalContextProperty).toHaveBeenCalledWith("User Id", "u1");
     expect(datadogRum.setGlobalContextProperty).toHaveBeenCalledWith("App Location", "CustomField");
