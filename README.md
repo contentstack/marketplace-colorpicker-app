@@ -13,7 +13,7 @@ A modern, accessible color picker custom field extension for Contentstack market
 - **Accessibility**: Full keyboard navigation and screen reader support
 - **TypeScript**: Fully typed for better development experience
 - **Responsive Design**: Works across different screen sizes
-- **Testing**: Vitest unit tests (`npm run test:coverage`, 90% threshold) and Playwright for E2E testing
+- **Testing**: Vitest unit tests (`npm run test:coverage`, 100% lines, statements and functions, 97% branches) and Playwright for E2E testing
 - **Modern UI**: A compact swatch that opens the react-color picker
 
 ## 📋 Prerequisites

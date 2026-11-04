@@ -18,7 +18,7 @@ Colour Picker: a Marketplace custom field (Tier 1, UI-only) built on `react-colo
 | Install          | `npm ci`                                                                                              |
 | Run locally      | `npm start` (http://localhost:5173; the field only renders inside Contentstack, at `/#/custom-field`) |
 | Lint / typecheck | `npm run lint` · `npm run typecheck`                                                                  |
-| Unit tests       | `npm test` · `npm run test:coverage` (fails under 90%)                                                |
+| Unit tests       | `npm test` · `npm run test:coverage` (gate: 100% lines, statements, functions; 97% branches)          |
 | Build            | `npm run build` (output `build/`, git-ignored)                                                        |
 
 - Routing is `HashRouter` because Contentstack loads fields in an iframe; the manifest path is `/#/custom-field`.
