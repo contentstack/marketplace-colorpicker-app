@@ -92,6 +92,7 @@
     "@types/lodash": "^4.17.27",
     "@types/node": "^20.19.43",
     "@types/prop-types": "^15.7.15",
+    "@types/react": "^18.3.31",
     "@types/react-color": "^3.0.13",
     "@types/reactcss": "^1.2.13",
     "@typescript-eslint/eslint-plugin": "^8.72.1",
