@@ -109,4 +109,13 @@ describe("colour custom field", () => {
     openPicker();
     expect((container.querySelector(".popover input") as HTMLInputElement).value.toLowerCase()).toBe("ff0000");
   });
+
+  // KNOWN BUG (to file) (it.fails: passes while the bug exists; turn into it() when fixed).
+  // The swatch is a plain div with no tabIndex or button role, so a keyboard user can never reach it to open the picker.
+  it.fails("makes the swatch reachable and announced as a button for keyboard users", () => {
+    const { container } = renderField();
+    const swatch = container.querySelector(".swatch") as HTMLElement;
+    expect(swatch.tabIndex).toBe(0);
+    expect(swatch).toHaveAttribute("role", "button");
+  });
 });
