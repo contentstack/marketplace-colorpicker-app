@@ -130,7 +130,7 @@ export const createApp = async (authToken: string, randomTestNumber: number): Pr
             type: "cs.cm.stack.custom_field",
             meta: [
               {
-                path: "/custom-field",
+                path: "/#/custom-field",
                 signed: false,
                 enabled: true,
                 data_type: "json",
