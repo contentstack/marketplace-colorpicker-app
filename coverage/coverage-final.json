@@ -1,0 +1,1335 @@
+{
+  "/Users/pritesh.jain/works/wt/colorpicker/src/index.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/index.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 8, "column": 0 }, "end": { "line": 10, "column": null } },
+      "1": { "start": { "line": 9, "column": 2 }, "end": { "line": 9, "column": null } },
+      "2": { "start": { "line": 12, "column": 13 }, "end": { "line": 12, "column": null } },
+      "3": { "start": { "line": 13, "column": 0 }, "end": { "line": 21, "column": null } }
+    },
+    "fnMap": {},
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 8, "column": 0 }, "end": { "line": 10, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 8, "column": 0 }, "end": { "line": 10, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 8
+      },
+      "1": {
+        "loc": { "start": { "line": 8, "column": 4 }, "end": { "line": 8, "column": 61 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 8, "column": 4 }, "end": { "line": 8, "column": 40 } },
+          { "start": { "line": 8, "column": 40 }, "end": { "line": 8, "column": 61 } }
+        ],
+        "line": 8
+      }
+    },
+    "s": { "0": 3, "1": 2, "2": 3, "3": 3 },
+    "f": {},
+    "b": { "0": [2, 1], "1": [3, 2] },
+    "meta": {
+      "lastBranch": 2,
+      "lastFunction": 0,
+      "lastStatement": 4,
+      "seen": {
+        "b:8:0:10:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:8:0:10:Infinity": 0,
+        "b:8:4:8:40:8:40:8:61": 1,
+        "s:9:2:9:Infinity": 1,
+        "s:12:13:12:Infinity": 2,
+        "s:13:0:21:Infinity": 3
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/contexts/customFieldExtensionContext.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/contexts/customFieldExtensionContext.ts",
+    "statementMap": { "0": { "start": { "line": 9, "column": 43 }, "end": { "line": 13, "column": null } } },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 11, "column": 16 }, "end": { "line": 11, "column": 29 } },
+        "loc": { "start": { "line": 11, "column": 16 }, "end": { "line": 11, "column": null } },
+        "line": 11
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 6 },
+    "f": { "0": 1 },
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 1,
+      "lastStatement": 1,
+      "seen": { "s:9:43:13:Infinity": 0, "f:11:16:11:29": 0 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/contexts/marketplaceContext.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/contexts/marketplaceContext.ts",
+    "statementMap": { "0": { "start": { "line": 10, "column": 37 }, "end": { "line": 13, "column": null } } },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 11 },
+    "f": {},
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 0,
+      "lastStatement": 1,
+      "seen": { "s:10:37:13:Infinity": 0 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useAnalytics.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useAnalytics.ts",
+    "statementMap": {
+      "0": { "start": { "line": 4, "column": 20 }, "end": { "line": 4, "column": 40 } },
+      "1": { "start": { "line": 15, "column": 28 }, "end": { "line": 28, "column": null } },
+      "2": { "start": { "line": 16, "column": 8 }, "end": { "line": 16, "column": null } },
+      "3": { "start": { "line": 17, "column": 8 }, "end": { "line": 24, "column": null } },
+      "4": { "start": { "line": 20, "column": 6 }, "end": { "line": 22, "column": null } },
+      "5": { "start": { "line": 21, "column": 8 }, "end": { "line": 21, "column": null } },
+      "6": { "start": { "line": 27, "column": 2 }, "end": { "line": 27, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 15, "column": 28 }, "end": { "line": 15, "column": null } },
+        "loc": { "start": { "line": 15, "column": 28 }, "end": { "line": 28, "column": null } },
+        "line": 15
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": { "start": { "line": 18, "column": 4 }, "end": { "line": 18, "column": 5 } },
+        "loc": { "start": { "line": 18, "column": 61 }, "end": { "line": 23, "column": null } },
+        "line": 18
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 18, "column": 20 }, "end": { "line": 18, "column": 61 } },
+        "type": "default-arg",
+        "locations": [{ "start": { "line": 18, "column": 59 }, "end": { "line": 18, "column": 61 } }],
+        "line": 18
+      },
+      "1": {
+        "loc": { "start": { "line": 20, "column": 6 }, "end": { "line": 22, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 20, "column": 6 }, "end": { "line": 22, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 20
+      }
+    },
+    "s": { "0": 4, "1": 4, "2": 4, "3": 4, "4": 4, "5": 3, "6": 4 },
+    "f": { "0": 4, "1": 4 },
+    "b": { "0": [4], "1": [3, 1] },
+    "meta": {
+      "lastBranch": 2,
+      "lastFunction": 2,
+      "lastStatement": 7,
+      "seen": {
+        "s:4:20:4:40": 0,
+        "s:15:28:28:Infinity": 1,
+        "f:15:28:15:Infinity": 0,
+        "s:16:8:16:Infinity": 2,
+        "s:17:8:24:Infinity": 3,
+        "f:18:4:18:5": 1,
+        "b:18:59:18:61": 0,
+        "b:20:6:22:Infinity:undefined:undefined:undefined:undefined": 1,
+        "s:20:6:22:Infinity": 4,
+        "s:21:8:21:Infinity": 5,
+        "s:27:2:27:Infinity": 6
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useAppLocation.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useAppLocation.ts",
+    "statementMap": {
+      "0": { "start": { "line": 10, "column": 30 }, "end": { "line": 32, "column": null } },
+      "1": { "start": { "line": 11, "column": 8 }, "end": { "line": 11, "column": null } },
+      "2": { "start": { "line": 12, "column": 8 }, "end": { "line": 12, "column": null } },
+      "3": { "start": { "line": 12, "column": 28 }, "end": { "line": 12, "column": 58 } },
+      "4": { "start": { "line": 17, "column": 34 }, "end": { "line": 29, "column": null } },
+      "5": { "start": { "line": 18, "column": 19 }, "end": { "line": 18, "column": null } },
+      "6": { "start": { "line": 19, "column": 31 }, "end": { "line": 19, "column": null } },
+      "7": { "start": { "line": 20, "column": 4 }, "end": { "line": 26, "column": null } },
+      "8": { "start": { "line": 20, "column": 17 }, "end": { "line": 20, "column": 20 } },
+      "9": { "start": { "line": 21, "column": 6 }, "end": { "line": 25, "column": null } },
+      "10": { "start": { "line": 22, "column": 8 }, "end": { "line": 22, "column": null } },
+      "11": { "start": { "line": 23, "column": 8 }, "end": { "line": 23, "column": null } },
+      "12": { "start": { "line": 24, "column": 8 }, "end": { "line": 24, "column": null } },
+      "13": { "start": { "line": 28, "column": 4 }, "end": { "line": 28, "column": null } },
+      "14": { "start": { "line": 31, "column": 2 }, "end": { "line": 31, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 10, "column": 30 }, "end": { "line": 10, "column": null } },
+        "loc": { "start": { "line": 10, "column": 30 }, "end": { "line": 32, "column": null } },
+        "line": 10
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": { "start": { "line": 12, "column": 28 }, "end": { "line": 12, "column": 34 } },
+        "loc": { "start": { "line": 12, "column": 28 }, "end": { "line": 12, "column": 58 } },
+        "line": 12
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": { "start": { "line": 17, "column": 45 }, "end": { "line": 17, "column": null } },
+        "loc": { "start": { "line": 17, "column": 45 }, "end": { "line": 29, "column": 5 } },
+        "line": 17
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 21, "column": 6 }, "end": { "line": 25, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 21, "column": 6 }, "end": { "line": 25, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 21
+      }
+    },
+    "s": {
+      "0": 6,
+      "1": 67,
+      "2": 67,
+      "3": 33,
+      "4": 67,
+      "5": 33,
+      "6": 33,
+      "7": 33,
+      "8": 33,
+      "9": 33,
+      "10": 32,
+      "11": 32,
+      "12": 32,
+      "13": 33,
+      "14": 67
+    },
+    "f": { "0": 67, "1": 33, "2": 33 },
+    "b": { "0": [32, 1] },
+    "meta": {
+      "lastBranch": 1,
+      "lastFunction": 3,
+      "lastStatement": 15,
+      "seen": {
+        "s:10:30:32:Infinity": 0,
+        "f:10:30:10:Infinity": 0,
+        "s:11:8:11:Infinity": 1,
+        "s:12:8:12:Infinity": 2,
+        "f:12:28:12:34": 1,
+        "s:12:28:12:58": 3,
+        "s:17:34:29:Infinity": 4,
+        "f:17:45:17:Infinity": 2,
+        "s:18:19:18:Infinity": 5,
+        "s:19:31:19:Infinity": 6,
+        "s:20:4:26:Infinity": 7,
+        "s:20:17:20:20": 8,
+        "b:21:6:25:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:21:6:25:Infinity": 9,
+        "s:22:8:22:Infinity": 10,
+        "s:23:8:23:Infinity": 11,
+        "s:24:8:24:Infinity": 12,
+        "s:28:4:28:Infinity": 13,
+        "s:31:2:31:Infinity": 14
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useAppSdk.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useAppSdk.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 16, "column": 25 }, "end": { "line": 19, "column": null } },
+      "1": { "start": { "line": 17, "column": 18 }, "end": { "line": 17, "column": null } },
+      "2": { "start": { "line": 18, "column": 2 }, "end": { "line": 18, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 16, "column": 25 }, "end": { "line": 16, "column": null } },
+        "loc": { "start": { "line": 16, "column": 25 }, "end": { "line": 19, "column": null } },
+        "line": 16
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 11, "1": 75, "2": 75 },
+    "f": { "0": 75 },
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 1,
+      "lastStatement": 3,
+      "seen": { "s:16:25:19:Infinity": 0, "f:16:25:16:Infinity": 0, "s:17:18:17:Infinity": 1, "s:18:2:18:Infinity": 2 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useCustomField.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useCustomField.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 11, "column": 30 }, "end": { "line": 14, "column": null } },
+      "1": { "start": { "line": 12, "column": 46 }, "end": { "line": 12, "column": null } },
+      "2": { "start": { "line": 13, "column": 2 }, "end": { "line": 13, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 11, "column": 30 }, "end": { "line": 11, "column": null } },
+        "loc": { "start": { "line": 11, "column": 30 }, "end": { "line": 14, "column": null } },
+        "line": 11
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 6, "1": 70, "2": 70 },
+    "f": { "0": 70 },
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 1,
+      "lastStatement": 3,
+      "seen": { "s:11:30:14:Infinity": 0, "f:11:30:11:Infinity": 0, "s:12:46:12:Infinity": 1, "s:13:2:13:Infinity": 2 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useFrame.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useFrame.ts",
+    "statementMap": {
+      "0": { "start": { "line": 9, "column": 24 }, "end": { "line": 18, "column": null } },
+      "1": { "start": { "line": 10, "column": 24 }, "end": { "line": 10, "column": null } },
+      "2": { "start": { "line": 11, "column": 44 }, "end": { "line": 11, "column": null } },
+      "3": { "start": { "line": 13, "column": 2 }, "end": { "line": 15, "column": null } },
+      "4": { "start": { "line": 14, "column": 4 }, "end": { "line": 14, "column": null } },
+      "5": { "start": { "line": 16, "column": 8 }, "end": { "line": 16, "column": null } },
+      "6": { "start": { "line": 17, "column": 2 }, "end": { "line": 17, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 9, "column": 24 }, "end": { "line": 9, "column": null } },
+        "loc": { "start": { "line": 9, "column": 24 }, "end": { "line": 18, "column": null } },
+        "line": 9
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 13, "column": 2 }, "end": { "line": 15, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 13, "column": 2 }, "end": { "line": 15, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 13
+      }
+    },
+    "s": { "0": 1, "1": 5, "2": 5, "3": 5, "4": 4, "5": 1, "6": 1 },
+    "f": { "0": 5 },
+    "b": { "0": [4, 1] },
+    "meta": {
+      "lastBranch": 1,
+      "lastFunction": 1,
+      "lastStatement": 7,
+      "seen": {
+        "s:9:24:18:Infinity": 0,
+        "f:9:24:9:Infinity": 0,
+        "s:10:24:10:Infinity": 1,
+        "s:11:44:11:Infinity": 2,
+        "b:13:2:15:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:13:2:15:Infinity": 3,
+        "s:14:4:14:Infinity": 4,
+        "s:16:8:16:Infinity": 5,
+        "s:17:2:17:Infinity": 6
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useHostUrl.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useHostUrl.ts",
+    "statementMap": {
+      "0": { "start": { "line": 6, "column": 26 }, "end": { "line": 16, "column": null } },
+      "1": { "start": { "line": 7, "column": 8 }, "end": { "line": 13, "column": null } },
+      "2": { "start": { "line": 8, "column": 22 }, "end": { "line": 8, "column": null } },
+      "3": { "start": { "line": 9, "column": 4 }, "end": { "line": 11, "column": null } },
+      "4": { "start": { "line": 10, "column": 6 }, "end": { "line": 10, "column": null } },
+      "5": { "start": { "line": 12, "column": 4 }, "end": { "line": 12, "column": null } },
+      "6": { "start": { "line": 15, "column": 2 }, "end": { "line": 15, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 6, "column": 26 }, "end": { "line": 6, "column": null } },
+        "loc": { "start": { "line": 6, "column": 26 }, "end": { "line": 16, "column": null } },
+        "line": 6
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": { "start": { "line": 7, "column": 26 }, "end": { "line": 7, "column": null } },
+        "loc": { "start": { "line": 7, "column": 26 }, "end": { "line": 13, "column": 5 } },
+        "line": 7
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 9, "column": 4 }, "end": { "line": 11, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 9, "column": 4 }, "end": { "line": 11, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 9
+      },
+      "1": {
+        "loc": { "start": { "line": 9, "column": 8 }, "end": { "line": 9, "column": 55 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 9, "column": 8 }, "end": { "line": 9, "column": 34 } },
+          { "start": { "line": 9, "column": 34 }, "end": { "line": 9, "column": 55 } }
+        ],
+        "line": 9
+      }
+    },
+    "s": { "0": 1, "1": 3, "2": 3, "3": 3, "4": 1, "5": 3, "6": 3 },
+    "f": { "0": 3, "1": 3 },
+    "b": { "0": [1, 2], "1": [3, 2] },
+    "meta": {
+      "lastBranch": 2,
+      "lastFunction": 2,
+      "lastStatement": 7,
+      "seen": {
+        "s:6:26:16:Infinity": 0,
+        "f:6:26:6:Infinity": 0,
+        "s:7:8:13:Infinity": 1,
+        "f:7:26:7:Infinity": 1,
+        "s:8:22:8:Infinity": 2,
+        "b:9:4:11:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:9:4:11:Infinity": 3,
+        "b:9:8:9:34:9:34:9:55": 1,
+        "s:10:6:10:Infinity": 4,
+        "s:12:4:12:Infinity": 5,
+        "s:15:2:15:Infinity": 6
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useJSErrorTracking.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useJSErrorTracking.ts",
+    "statementMap": {
+      "0": { "start": { "line": 5, "column": 20 }, "end": { "line": 5, "column": 40 } },
+      "1": { "start": { "line": 11, "column": 34 }, "end": { "line": 36, "column": null } },
+      "2": { "start": { "line": 12, "column": 2 }, "end": { "line": 35, "column": null } },
+      "3": { "start": { "line": 19, "column": 6 }, "end": { "line": 21, "column": null } },
+      "4": { "start": { "line": 20, "column": 8 }, "end": { "line": 20, "column": null } },
+      "5": { "start": { "line": 23, "column": 6 }, "end": { "line": 23, "column": null } },
+      "6": { "start": { "line": 31, "column": 6 }, "end": { "line": 33, "column": null } },
+      "7": { "start": { "line": 32, "column": 8 }, "end": { "line": 32, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 11, "column": 34 }, "end": { "line": 11, "column": null } },
+        "loc": { "start": { "line": 11, "column": 34 }, "end": { "line": 36, "column": null } },
+        "line": 11
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": { "start": { "line": 18, "column": 28 }, "end": { "line": 18, "column": 29 } },
+        "loc": { "start": { "line": 18, "column": 29 }, "end": { "line": 24, "column": 7 } },
+        "line": 18
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": { "start": { "line": 30, "column": 35 }, "end": { "line": 30, "column": 36 } },
+        "loc": { "start": { "line": 30, "column": 36 }, "end": { "line": 34, "column": 7 } },
+        "line": 30
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": { "start": { "line": 31, "column": 23 }, "end": { "line": 31, "column": 24 } },
+        "loc": { "start": { "line": 31, "column": 31 }, "end": { "line": 33, "column": null } },
+        "line": 31
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 19, "column": 6 }, "end": { "line": 21, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 19, "column": 6 }, "end": { "line": 21, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 19
+      }
+    },
+    "s": { "0": 7, "1": 7, "2": 32, "3": 3, "4": 1, "5": 2, "6": 13, "7": 52 },
+    "f": { "0": 32, "1": 3, "2": 13, "3": 52 },
+    "b": { "0": [1, 2] },
+    "meta": {
+      "lastBranch": 1,
+      "lastFunction": 4,
+      "lastStatement": 8,
+      "seen": {
+        "s:5:20:5:40": 0,
+        "s:11:34:36:Infinity": 1,
+        "f:11:34:11:Infinity": 0,
+        "s:12:2:35:Infinity": 2,
+        "f:18:28:18:29": 1,
+        "b:19:6:21:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:19:6:21:Infinity": 3,
+        "s:20:8:20:Infinity": 4,
+        "s:23:6:23:Infinity": 5,
+        "f:30:35:30:36": 2,
+        "s:31:6:33:Infinity": 6,
+        "f:31:23:31:24": 3,
+        "s:32:8:32:Infinity": 7
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useSdkDataByPath.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/hooks/useSdkDataByPath.ts",
+    "statementMap": {
+      "0": { "start": { "line": 14, "column": 32 }, "end": { "line": 17, "column": null } },
+      "1": { "start": { "line": 15, "column": 8 }, "end": { "line": 15, "column": null } },
+      "2": { "start": { "line": 16, "column": 2 }, "end": { "line": 16, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 14, "column": 32 }, "end": { "line": 14, "column": 33 } },
+        "loc": { "start": { "line": 14, "column": 47 }, "end": { "line": 17, "column": null } },
+        "line": 14
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 1, "1": 3, "2": 3 },
+    "f": { "0": 3 },
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 1,
+      "lastStatement": 3,
+      "seen": { "s:14:32:17:Infinity": 0, "f:14:32:14:33": 0, "s:15:8:15:Infinity": 1, "s:16:2:16:Infinity": 2 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/locales/en-us/index.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/locales/en-us/index.ts",
+    "statementMap": { "0": { "start": { "line": 1, "column": 20 }, "end": { "line": 61, "column": null } } },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 1 },
+    "f": {},
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 0,
+      "lastStatement": 1,
+      "seen": { "s:1:20:61:Infinity": 0 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/providers/CustomFieldExtensionProvider.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/providers/CustomFieldExtensionProvider.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 7, "column": 44 }, "end": { "line": 40, "column": null } },
+      "1": { "start": { "line": 8, "column": 37 }, "end": { "line": 8, "column": null } },
+      "2": { "start": { "line": 9, "column": 29 }, "end": { "line": 9, "column": null } },
+      "3": { "start": { "line": 10, "column": 37 }, "end": { "line": 10, "column": null } },
+      "4": { "start": { "line": 11, "column": 19 }, "end": { "line": 11, "column": null } },
+      "5": { "start": { "line": 13, "column": 2 }, "end": { "line": 23, "column": null } },
+      "6": { "start": { "line": 14, "column": 5 }, "end": { "line": 22, "column": null } },
+      "7": { "start": { "line": 16, "column": 6 }, "end": { "line": 21, "column": null } },
+      "8": { "start": { "line": 17, "column": 8 }, "end": { "line": 17, "column": null } },
+      "9": { "start": { "line": 18, "column": 26 }, "end": { "line": 18, "column": null } },
+      "10": { "start": { "line": 19, "column": 8 }, "end": { "line": 19, "column": null } },
+      "11": { "start": { "line": 20, "column": 8 }, "end": { "line": 20, "column": null } },
+      "12": { "start": { "line": 25, "column": 8 }, "end": { "line": 32, "column": null } },
+      "13": { "start": { "line": 27, "column": 6 }, "end": { "line": 27, "column": null } },
+      "14": { "start": { "line": 28, "column": 6 }, "end": { "line": 28, "column": null } },
+      "15": { "start": { "line": 29, "column": 6 }, "end": { "line": 29, "column": null } },
+      "16": { "start": { "line": 30, "column": 6 }, "end": { "line": 30, "column": null } },
+      "17": { "start": { "line": 35, "column": 2 }, "end": { "line": 37, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 7, "column": 44 }, "end": { "line": 7, "column": 45 } },
+        "loc": { "start": { "line": 7, "column": 82 }, "end": { "line": 40, "column": null } },
+        "line": 7
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": { "start": { "line": 13, "column": 12 }, "end": { "line": 13, "column": null } },
+        "loc": { "start": { "line": 13, "column": 12 }, "end": { "line": 23, "column": 5 } },
+        "line": 13
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": { "start": { "line": 14, "column": 5 }, "end": { "line": 14, "column": null } },
+        "loc": { "start": { "line": 14, "column": 5 }, "end": { "line": 22, "column": null } },
+        "line": 14
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": { "start": { "line": 26, "column": 4 }, "end": { "line": 26, "column": 11 } },
+        "loc": { "start": { "line": 26, "column": 11 }, "end": { "line": 31, "column": null } },
+        "line": 26
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 16, "column": 6 }, "end": { "line": 21, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 16, "column": 6 }, "end": { "line": 21, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 16
+      }
+    },
+    "s": {
+      "0": 5,
+      "1": 61,
+      "2": 61,
+      "3": 61,
+      "4": 61,
+      "5": 61,
+      "6": 24,
+      "7": 24,
+      "8": 19,
+      "9": 19,
+      "10": 19,
+      "11": 19,
+      "12": 61,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "17": 61
+    },
+    "f": { "0": 61, "1": 24, "2": 24, "3": 1 },
+    "b": { "0": [19, 5] },
+    "meta": {
+      "lastBranch": 1,
+      "lastFunction": 4,
+      "lastStatement": 18,
+      "seen": {
+        "s:7:44:40:Infinity": 0,
+        "f:7:44:7:45": 0,
+        "s:8:37:8:Infinity": 1,
+        "s:9:29:9:Infinity": 2,
+        "s:10:37:10:Infinity": 3,
+        "s:11:19:11:Infinity": 4,
+        "s:13:2:23:Infinity": 5,
+        "f:13:12:13:Infinity": 1,
+        "s:14:5:22:Infinity": 6,
+        "f:14:5:14:Infinity": 2,
+        "b:16:6:21:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:16:6:21:Infinity": 7,
+        "s:17:8:17:Infinity": 8,
+        "s:18:26:18:Infinity": 9,
+        "s:19:8:19:Infinity": 10,
+        "s:20:8:20:Infinity": 11,
+        "s:25:8:32:Infinity": 12,
+        "f:26:4:26:11": 3,
+        "s:27:6:27:Infinity": 13,
+        "s:28:6:28:Infinity": 14,
+        "s:29:6:29:Infinity": 15,
+        "s:30:6:30:Infinity": 16,
+        "s:35:2:37:Infinity": 17
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/providers/MarketplaceAppProvider.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/providers/MarketplaceAppProvider.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 20, "column": 63 }, "end": { "line": 66, "column": null } },
+      "1": { "start": { "line": 21, "column": 27 }, "end": { "line": 21, "column": null } },
+      "2": { "start": { "line": 22, "column": 27 }, "end": { "line": 22, "column": null } },
+      "3": { "start": { "line": 23, "column": 30 }, "end": { "line": 23, "column": null } },
+      "4": { "start": { "line": 24, "column": 41 }, "end": { "line": 24, "column": null } },
+      "5": { "start": { "line": 25, "column": 22 }, "end": { "line": 25, "column": 42 } },
+      "6": { "start": { "line": 28, "column": 2 }, "end": { "line": 53, "column": null } },
+      "7": { "start": { "line": 29, "column": 4 }, "end": { "line": 51, "column": null } },
+      "8": { "start": { "line": 31, "column": 8 }, "end": { "line": 31, "column": null } },
+      "9": { "start": { "line": 32, "column": 26 }, "end": { "line": 32, "column": null } },
+      "10": { "start": { "line": 33, "column": 8 }, "end": { "line": 33, "column": null } },
+      "11": { "start": { "line": 34, "column": 8 }, "end": { "line": 34, "column": null } },
+      "12": { "start": { "line": 35, "column": 14 }, "end": { "line": 35, "column": null } },
+      "13": { "start": { "line": 36, "column": 27 }, "end": { "line": 41, "column": null } },
+      "14": { "start": { "line": 42, "column": 8 }, "end": { "line": 42, "column": 39 } },
+      "15": { "start": { "line": 44, "column": 8 }, "end": { "line": 46, "column": null } },
+      "16": { "start": { "line": 45, "column": 10 }, "end": { "line": 45, "column": null } },
+      "17": { "start": { "line": 49, "column": 8 }, "end": { "line": 49, "column": null } },
+      "18": { "start": { "line": 50, "column": 8 }, "end": { "line": 50, "column": null } },
+      "19": { "start": { "line": 57, "column": 2 }, "end": { "line": 59, "column": null } },
+      "20": { "start": { "line": 58, "column": 4 }, "end": { "line": 58, "column": null } },
+      "21": { "start": { "line": 61, "column": 2 }, "end": { "line": 63, "column": null } },
+      "22": { "start": { "line": 62, "column": 4 }, "end": { "line": 62, "column": null } },
+      "23": { "start": { "line": 65, "column": 2 }, "end": { "line": 65, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 20, "column": 63 }, "end": { "line": 20, "column": 64 } },
+        "loc": { "start": { "line": 20, "column": 76 }, "end": { "line": 66, "column": null } },
+        "line": 20
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": { "start": { "line": 28, "column": 12 }, "end": { "line": 28, "column": null } },
+        "loc": { "start": { "line": 28, "column": 12 }, "end": { "line": 53, "column": 5 } },
+        "line": 28
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": { "start": { "line": 30, "column": 12 }, "end": { "line": 30, "column": 19 } },
+        "loc": { "start": { "line": 30, "column": 19 }, "end": { "line": 47, "column": null } },
+        "line": 30
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": { "start": { "line": 48, "column": 13 }, "end": { "line": 48, "column": 14 } },
+        "loc": { "start": { "line": 48, "column": 14 }, "end": { "line": 51, "column": null } },
+        "line": 48
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 44, "column": 8 }, "end": { "line": 46, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 44, "column": 8 }, "end": { "line": 46, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 44
+      },
+      "1": {
+        "loc": { "start": { "line": 57, "column": 2 }, "end": { "line": 59, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 57, "column": 2 }, "end": { "line": 59, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 57
+      },
+      "2": {
+        "loc": { "start": { "line": 57, "column": 6 }, "end": { "line": 57, "column": 33 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 57, "column": 6 }, "end": { "line": 57, "column": 17 } },
+          { "start": { "line": 57, "column": 7 }, "end": { "line": 57, "column": 33 } }
+        ],
+        "line": 57
+      },
+      "3": {
+        "loc": { "start": { "line": 61, "column": 2 }, "end": { "line": 63, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 61, "column": 2 }, "end": { "line": 63, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 61
+      }
+    },
+    "s": {
+      "0": 5,
+      "1": 30,
+      "2": 30,
+      "3": 30,
+      "4": 30,
+      "5": 30,
+      "6": 30,
+      "7": 14,
+      "8": 13,
+      "9": 13,
+      "10": 13,
+      "11": 13,
+      "12": 13,
+      "13": 13,
+      "14": 13,
+      "15": 13,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 30,
+      "20": 14,
+      "21": 16,
+      "22": 1,
+      "23": 15
+    },
+    "f": { "0": 30, "1": 14, "2": 13, "3": 1 },
+    "b": { "0": [1, 12], "1": [14, 16], "2": [30, 29], "3": [1, 15] },
+    "meta": {
+      "lastBranch": 4,
+      "lastFunction": 4,
+      "lastStatement": 24,
+      "seen": {
+        "s:20:63:66:Infinity": 0,
+        "f:20:63:20:64": 0,
+        "s:21:27:21:Infinity": 1,
+        "s:22:27:22:Infinity": 2,
+        "s:23:30:23:Infinity": 3,
+        "s:24:41:24:Infinity": 4,
+        "s:25:22:25:42": 5,
+        "s:28:2:53:Infinity": 6,
+        "f:28:12:28:Infinity": 1,
+        "s:29:4:51:Infinity": 7,
+        "f:30:12:30:19": 2,
+        "s:31:8:31:Infinity": 8,
+        "s:32:26:32:Infinity": 9,
+        "s:33:8:33:Infinity": 10,
+        "s:34:8:34:Infinity": 11,
+        "s:35:14:35:Infinity": 12,
+        "s:36:27:41:Infinity": 13,
+        "s:42:8:42:39": 14,
+        "b:44:8:46:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:44:8:46:Infinity": 15,
+        "s:45:10:45:Infinity": 16,
+        "f:48:13:48:14": 3,
+        "s:49:8:49:Infinity": 17,
+        "s:50:8:50:Infinity": 18,
+        "b:57:2:59:Infinity:undefined:undefined:undefined:undefined": 1,
+        "s:57:2:59:Infinity": 19,
+        "b:57:6:57:17:57:7:57:33": 2,
+        "s:58:4:58:Infinity": 20,
+        "b:61:2:63:Infinity:undefined:undefined:undefined:undefined": 3,
+        "s:61:2:63:Infinity": 21,
+        "s:62:4:62:Infinity": 22,
+        "s:65:2:65:Infinity": 23
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/common/utils/functions.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/common/utils/functions.ts",
+    "statementMap": {
+      "0": { "start": { "line": 5, "column": 8 }, "end": { "line": 5, "column": null } },
+      "1": { "start": { "line": 6, "column": 21 }, "end": { "line": 6, "column": null } },
+      "2": { "start": { "line": 7, "column": 2 }, "end": { "line": 12, "column": null } },
+      "3": { "start": { "line": 7, "column": 15 }, "end": { "line": 7, "column": 18 } },
+      "4": { "start": { "line": 8, "column": 4 }, "end": { "line": 11, "column": null } },
+      "5": { "start": { "line": 9, "column": 6 }, "end": { "line": 9, "column": null } },
+      "6": { "start": { "line": 10, "column": 6 }, "end": { "line": 10, "column": null } },
+      "7": { "start": { "line": 13, "column": 2 }, "end": { "line": 13, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "getAppLocation",
+        "decl": { "start": { "line": 4, "column": 16 }, "end": { "line": 4, "column": 31 } },
+        "loc": { "start": { "line": 4, "column": 45 }, "end": { "line": 14, "column": null } },
+        "line": 4
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 8, "column": 4 }, "end": { "line": 11, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 8, "column": 4 }, "end": { "line": 11, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 8
+      }
+    },
+    "s": { "0": 16, "1": 16, "2": 16, "3": 16, "4": 18, "5": 15, "6": 15, "7": 16 },
+    "f": { "0": 16 },
+    "b": { "0": [15, 3] },
+    "meta": {
+      "lastBranch": 1,
+      "lastFunction": 1,
+      "lastStatement": 8,
+      "seen": {
+        "f:4:16:4:31": 0,
+        "s:5:8:5:Infinity": 0,
+        "s:6:21:6:Infinity": 1,
+        "s:7:2:12:Infinity": 2,
+        "s:7:15:7:18": 3,
+        "b:8:4:11:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:8:4:11:Infinity": 4,
+        "s:9:6:9:Infinity": 5,
+        "s:10:6:10:Infinity": 6,
+        "s:13:2:13:Infinity": 7
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/components/AppFailed.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/components/AppFailed.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 5, "column": 25 }, "end": { "line": 34, "column": null } },
+      "1": { "start": { "line": 6, "column": 2 }, "end": { "line": 27, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 5, "column": 25 }, "end": { "line": 5, "column": null } },
+        "loc": { "start": { "line": 5, "column": 25 }, "end": { "line": 34, "column": null } },
+        "line": 5
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 5, "1": 1 },
+    "f": { "0": 1 },
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 1,
+      "lastStatement": 2,
+      "seen": { "s:5:25:34:Infinity": 0, "f:5:25:5:Infinity": 0, "s:6:2:27:Infinity": 1 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/components/ErrorBoundary.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/components/ErrorBoundary.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 5, "column": 20 }, "end": { "line": 5, "column": 40 } },
+      "1": { "start": { "line": 7, "column": 0 }, "end": { "line": 21, "column": null } },
+      "2": { "start": { "line": 24, "column": 0 }, "end": { "line": 24, "column": null } },
+      "3": { "start": { "line": 25, "column": 0 }, "end": { "line": 25, "column": null } },
+      "4": { "start": { "line": 44, "column": 4 }, "end": { "line": 44, "column": null } },
+      "5": { "start": { "line": 49, "column": 4 }, "end": { "line": 52, "column": null } },
+      "6": { "start": { "line": 50, "column": 6 }, "end": { "line": 50, "column": null } },
+      "7": { "start": { "line": 51, "column": 6 }, "end": { "line": 51, "column": null } },
+      "8": { "start": { "line": 53, "column": 4 }, "end": { "line": 53, "column": null } },
+      "9": { "start": { "line": 57, "column": 4 }, "end": { "line": 60, "column": null } },
+      "10": { "start": { "line": 59, "column": 6 }, "end": { "line": 59, "column": null } },
+      "11": { "start": { "line": 62, "column": 4 }, "end": { "line": 62, "column": null } },
+      "12": { "start": { "line": 38, "column": 4 }, "end": { "line": 35, "column": null } },
+      "13": { "start": { "line": 39, "column": 4 }, "end": { "line": 39, "column": null } },
+      "14": { "start": { "line": 32, "column": 2 }, "end": { "line": 34, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "getDerivedStateFromError",
+        "decl": { "start": { "line": 42, "column": 9 }, "end": { "line": 42, "column": 36 } },
+        "loc": { "start": { "line": 42, "column": 36 }, "end": { "line": 45, "column": null } },
+        "line": 42
+      },
+      "1": {
+        "name": "componentDidCatch",
+        "decl": { "start": { "line": 47, "column": 2 }, "end": { "line": 47, "column": 20 } },
+        "loc": { "start": { "line": 47, "column": 34 }, "end": { "line": 54, "column": null } },
+        "line": 47
+      },
+      "2": {
+        "name": "render",
+        "decl": { "start": { "line": 56, "column": 2 }, "end": { "line": 56, "column": 11 } },
+        "loc": { "start": { "line": 56, "column": 11 }, "end": { "line": 63, "column": null } },
+        "line": 56
+      },
+      "3": {
+        "name": "constructor",
+        "decl": { "start": { "line": 37, "column": 2 }, "end": { "line": 37, "column": 14 } },
+        "loc": { "start": { "line": 37, "column": 52 }, "end": { "line": 40, "column": null } },
+        "line": 37
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 49, "column": 4 }, "end": { "line": 52, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 49, "column": 4 }, "end": { "line": 52, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 49
+      },
+      "1": {
+        "loc": { "start": { "line": 57, "column": 4 }, "end": { "line": 60, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 57, "column": 4 }, "end": { "line": 60, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 57
+      }
+    },
+    "s": {
+      "0": 6,
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 4,
+      "5": 2,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 18,
+      "10": 4,
+      "11": 14,
+      "12": 16,
+      "13": 16,
+      "14": 6
+    },
+    "f": { "0": 6, "1": 2, "2": 18, "3": 16 },
+    "b": { "0": [1, 1], "1": [4, 14] },
+    "meta": {
+      "lastBranch": 2,
+      "lastFunction": 4,
+      "lastStatement": 15,
+      "seen": {
+        "s:5:20:5:40": 0,
+        "s:7:0:21:Infinity": 1,
+        "s:24:0:24:Infinity": 2,
+        "s:25:0:25:Infinity": 3,
+        "f:42:9:42:36": 0,
+        "s:44:4:44:Infinity": 4,
+        "f:47:2:47:20": 1,
+        "b:49:4:52:Infinity:undefined:undefined:undefined:undefined": 0,
+        "s:49:4:52:Infinity": 5,
+        "s:50:6:50:Infinity": 6,
+        "s:51:6:51:Infinity": 7,
+        "s:53:4:53:Infinity": 8,
+        "f:56:2:56:11": 2,
+        "b:57:4:60:Infinity:undefined:undefined:undefined:undefined": 1,
+        "s:57:4:60:Infinity": 9,
+        "s:59:6:59:Infinity": 10,
+        "s:62:4:62:Infinity": 11,
+        "f:37:2:37:14": 3,
+        "s:38:4:35:Infinity": 12,
+        "s:39:4:39:Infinity": 13,
+        "s:32:2:34:Infinity": 14
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/constants/index.ts": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/constants/index.ts",
+    "statementMap": { "0": { "start": { "line": 1, "column": 26 }, "end": { "line": 4, "column": null } } },
+    "fnMap": {},
+    "branchMap": {},
+    "s": { "0": 5 },
+    "f": {},
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 0,
+      "lastStatement": 1,
+      "seen": { "s:1:26:4:Infinity": 0 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/containers/index.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/containers/index.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 1, "column": 20 }, "end": { "line": 34, "column": null } },
+      "1": { "start": { "line": 2, "column": 2 }, "end": { "line": 27, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 1, "column": 20 }, "end": { "line": 1, "column": null } },
+        "loc": { "start": { "line": 1, "column": 20 }, "end": { "line": 34, "column": null } },
+        "line": 1
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 1, "1": 1 },
+    "f": { "0": 1 },
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 1,
+      "lastStatement": 2,
+      "seen": { "s:1:20:34:Infinity": 0, "f:1:20:1:Infinity": 0, "s:2:2:27:Infinity": 1 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/containers/404/404.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/containers/404/404.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 4, "column": 21 }, "end": { "line": 21, "column": null } },
+      "1": { "start": { "line": 5, "column": 2 }, "end": { "line": 15, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 4, "column": 21 }, "end": { "line": 4, "column": null } },
+        "loc": { "start": { "line": 4, "column": 21 }, "end": { "line": 21, "column": null } },
+        "line": 4
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 1, "1": 1 },
+    "f": { "0": 1 },
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 1,
+      "lastStatement": 2,
+      "seen": { "s:4:21:21:Infinity": 0, "f:4:21:4:Infinity": 0, "s:5:2:15:Infinity": 1 },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/containers/App/App.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/containers/App/App.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 12, "column": 29 }, "end": { "line": 12, "column": null } },
+      "1": { "start": { "line": 12, "column": 46 }, "end": { "line": 12, "column": null } },
+      "2": { "start": { "line": 13, "column": 21 }, "end": { "line": 13, "column": null } },
+      "3": { "start": { "line": 13, "column": 38 }, "end": { "line": 13, "column": null } },
+      "4": { "start": { "line": 14, "column": 20 }, "end": { "line": 14, "column": null } },
+      "5": { "start": { "line": 14, "column": 37 }, "end": { "line": 14, "column": null } },
+      "6": { "start": { "line": 17, "column": 2 }, "end": { "line": 32, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 12, "column": 40 }, "end": { "line": 12, "column": 46 } },
+        "loc": { "start": { "line": 12, "column": 46 }, "end": { "line": 12, "column": null } },
+        "line": 12
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": { "start": { "line": 13, "column": 32 }, "end": { "line": 13, "column": 38 } },
+        "loc": { "start": { "line": 13, "column": 38 }, "end": { "line": 13, "column": null } },
+        "line": 13
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": { "start": { "line": 14, "column": 31 }, "end": { "line": 14, "column": 37 } },
+        "loc": { "start": { "line": 14, "column": 37 }, "end": { "line": 14, "column": null } },
+        "line": 14
+      },
+      "3": {
+        "name": "App",
+        "decl": { "start": { "line": 16, "column": 9 }, "end": { "line": 16, "column": null } },
+        "loc": { "start": { "line": 16, "column": 9 }, "end": { "line": 37, "column": null } },
+        "line": 16
+      }
+    },
+    "branchMap": {},
+    "s": { "0": 4, "1": 4, "2": 4, "3": 1, "4": 4, "5": 1, "6": 9 },
+    "f": { "0": 4, "1": 1, "2": 1, "3": 9 },
+    "b": {},
+    "meta": {
+      "lastBranch": 0,
+      "lastFunction": 4,
+      "lastStatement": 7,
+      "seen": {
+        "s:12:29:12:Infinity": 0,
+        "f:12:40:12:46": 0,
+        "s:12:46:12:Infinity": 1,
+        "s:13:21:13:Infinity": 2,
+        "f:13:32:13:38": 1,
+        "s:13:38:13:Infinity": 3,
+        "s:14:20:14:Infinity": 4,
+        "f:14:31:14:37": 2,
+        "s:14:37:14:Infinity": 5,
+        "f:16:9:16:Infinity": 3,
+        "s:17:2:32:Infinity": 6
+      },
+      "fnNames": {}
+    }
+  },
+  "/Users/pritesh.jain/works/wt/colorpicker/src/containers/CustomField/CustomField.tsx": {
+    "path": "/Users/pritesh.jain/works/wt/colorpicker/src/containers/CustomField/CustomField.tsx",
+    "statementMap": {
+      "0": { "start": { "line": 8, "column": 29 }, "end": { "line": 93, "column": null } },
+      "1": { "start": { "line": 9, "column": 35 }, "end": { "line": 9, "column": null } },
+      "2": { "start": { "line": 11, "column": 30 }, "end": { "line": 19, "column": null } },
+      "3": { "start": { "line": 21, "column": 8 }, "end": { "line": 30, "column": null } },
+      "4": { "start": { "line": 32, "column": 33 }, "end": { "line": 37, "column": null } },
+      "5": { "start": { "line": 33, "column": 4 }, "end": { "line": 36, "column": null } },
+      "6": { "start": { "line": 33, "column": 24 }, "end": { "line": 36, "column": null } },
+      "7": { "start": { "line": 39, "column": 22 }, "end": { "line": 44, "column": null } },
+      "8": { "start": { "line": 40, "column": 4 }, "end": { "line": 43, "column": null } },
+      "9": { "start": { "line": 40, "column": 24 }, "end": { "line": 43, "column": null } },
+      "10": { "start": { "line": 46, "column": 29 }, "end": { "line": 58, "column": null } },
+      "11": { "start": { "line": 47, "column": 16 }, "end": { "line": 47, "column": 26 } },
+      "12": { "start": { "line": 48, "column": 4 }, "end": { "line": 56, "column": null } },
+      "13": { "start": { "line": 48, "column": 24 }, "end": { "line": 56, "column": null } },
+      "14": { "start": { "line": 57, "column": 4 }, "end": { "line": 57, "column": null } },
+      "15": { "start": { "line": 60, "column": 2 }, "end": { "line": 74, "column": null } },
+      "16": { "start": { "line": 61, "column": 4 }, "end": { "line": 72, "column": null } },
+      "17": { "start": { "line": 62, "column": 18 }, "end": { "line": 62, "column": 49 } },
+      "18": { "start": { "line": 63, "column": 6 }, "end": { "line": 71, "column": null } },
+      "19": { "start": { "line": 63, "column": 26 }, "end": { "line": 71, "column": null } },
+      "20": { "start": { "line": 76, "column": 2 }, "end": { "line": 88, "column": null } }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": { "start": { "line": 8, "column": 29 }, "end": { "line": 8, "column": null } },
+        "loc": { "start": { "line": 8, "column": 29 }, "end": { "line": 93, "column": null } },
+        "line": 8
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": { "start": { "line": 32, "column": 33 }, "end": { "line": 32, "column": null } },
+        "loc": { "start": { "line": 32, "column": 33 }, "end": { "line": 37, "column": null } },
+        "line": 32
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": { "start": { "line": 33, "column": 13 }, "end": { "line": 33, "column": 14 } },
+        "loc": { "start": { "line": 33, "column": 24 }, "end": { "line": 36, "column": null } },
+        "line": 33
+      },
+      "3": {
+        "name": "(anonymous_3)",
+        "decl": { "start": { "line": 39, "column": 22 }, "end": { "line": 39, "column": null } },
+        "loc": { "start": { "line": 39, "column": 22 }, "end": { "line": 44, "column": null } },
+        "line": 39
+      },
+      "4": {
+        "name": "(anonymous_4)",
+        "decl": { "start": { "line": 40, "column": 13 }, "end": { "line": 40, "column": 14 } },
+        "loc": { "start": { "line": 40, "column": 24 }, "end": { "line": 43, "column": null } },
+        "line": 40
+      },
+      "5": {
+        "name": "(anonymous_5)",
+        "decl": { "start": { "line": 46, "column": 29 }, "end": { "line": 46, "column": 30 } },
+        "loc": { "start": { "line": 46, "column": 30 }, "end": { "line": 58, "column": null } },
+        "line": 46
+      },
+      "6": {
+        "name": "(anonymous_6)",
+        "decl": { "start": { "line": 48, "column": 13 }, "end": { "line": 48, "column": 14 } },
+        "loc": { "start": { "line": 48, "column": 24 }, "end": { "line": 56, "column": null } },
+        "line": 48
+      },
+      "7": {
+        "name": "(anonymous_7)",
+        "decl": { "start": { "line": 60, "column": 12 }, "end": { "line": 60, "column": null } },
+        "loc": { "start": { "line": 60, "column": 12 }, "end": { "line": 74, "column": 5 } },
+        "line": 60
+      },
+      "8": {
+        "name": "(anonymous_8)",
+        "decl": { "start": { "line": 63, "column": 15 }, "end": { "line": 63, "column": 16 } },
+        "loc": { "start": { "line": 63, "column": 26 }, "end": { "line": 71, "column": null } },
+        "line": 63
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": { "start": { "line": 54, "column": 11 }, "end": { "line": 54, "column": null } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 54, "column": 11 }, "end": { "line": 54, "column": 16 } },
+          { "start": { "line": 54, "column": 20 }, "end": { "line": 54, "column": null } }
+        ],
+        "line": 54
+      },
+      "1": {
+        "loc": { "start": { "line": 61, "column": 4 }, "end": { "line": 72, "column": null } },
+        "type": "if",
+        "locations": [
+          { "start": { "line": 61, "column": 4 }, "end": { "line": 72, "column": null } },
+          { "start": {}, "end": {} }
+        ],
+        "line": 61
+      },
+      "2": {
+        "loc": { "start": { "line": 61, "column": 8 }, "end": { "line": 61, "column": 100 } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 61, "column": 8 }, "end": { "line": 61, "column": 22 } },
+          { "start": { "line": 61, "column": 22 }, "end": { "line": 61, "column": 56 } },
+          { "start": { "line": 61, "column": 56 }, "end": { "line": 61, "column": 79 } },
+          { "start": { "line": 61, "column": 79 }, "end": { "line": 61, "column": 100 } }
+        ],
+        "line": 61
+      },
+      "3": {
+        "loc": { "start": { "line": 69, "column": 13 }, "end": { "line": 69, "column": null } },
+        "type": "binary-expr",
+        "locations": [
+          { "start": { "line": 69, "column": 13 }, "end": { "line": 69, "column": 18 } },
+          { "start": { "line": 69, "column": 22 }, "end": { "line": 69, "column": null } }
+        ],
+        "line": 69
+      },
+      "4": {
+        "loc": { "start": { "line": 83, "column": 11 }, "end": { "line": 88, "column": null } },
+        "type": "cond-expr",
+        "locations": [
+          { "start": { "line": 83, "column": 32 }, "end": { "line": 88, "column": null } },
+          { "start": { "line": 88, "column": 14 }, "end": { "line": 88, "column": null } }
+        ],
+        "line": 83
+      }
+    },
+    "s": {
+      "0": 5,
+      "1": 68,
+      "2": 68,
+      "3": 68,
+      "4": 68,
+      "5": 7,
+      "6": 7,
+      "7": 68,
+      "8": 2,
+      "9": 2,
+      "10": 68,
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 68,
+      "16": 24,
+      "17": 5,
+      "18": 5,
+      "19": 4,
+      "20": 68
+    },
+    "f": { "0": 68, "1": 7, "2": 7, "3": 2, "4": 2, "5": 1, "6": 1, "7": 24, "8": 4 },
+    "b": { "0": [1, 0], "1": [5, 19], "2": [24, 5, 5, 5], "3": [4, 1], "4": [9, 58] },
+    "meta": {
+      "lastBranch": 5,
+      "lastFunction": 9,
+      "lastStatement": 21,
+      "seen": {
+        "s:8:29:93:Infinity": 0,
+        "f:8:29:8:Infinity": 0,
+        "s:9:35:9:Infinity": 1,
+        "s:11:30:19:Infinity": 2,
+        "s:21:8:30:Infinity": 3,
+        "s:32:33:37:Infinity": 4,
+        "f:32:33:32:Infinity": 1,
+        "s:33:4:36:Infinity": 5,
+        "f:33:13:33:14": 2,
+        "s:33:24:36:Infinity": 6,
+        "s:39:22:44:Infinity": 7,
+        "f:39:22:39:Infinity": 3,
+        "s:40:4:43:Infinity": 8,
+        "f:40:13:40:14": 4,
+        "s:40:24:43:Infinity": 9,
+        "s:46:29:58:Infinity": 10,
+        "f:46:29:46:30": 5,
+        "s:47:16:47:26": 11,
+        "s:48:4:56:Infinity": 12,
+        "f:48:13:48:14": 6,
+        "s:48:24:56:Infinity": 13,
+        "b:54:11:54:16:54:20:54:Infinity": 0,
+        "s:57:4:57:Infinity": 14,
+        "s:60:2:74:Infinity": 15,
+        "f:60:12:60:Infinity": 7,
+        "b:61:4:72:Infinity:undefined:undefined:undefined:undefined": 1,
+        "s:61:4:72:Infinity": 16,
+        "b:61:8:61:22:61:22:61:56:61:56:61:79:61:79:61:100": 2,
+        "s:62:18:62:49": 17,
+        "s:63:6:71:Infinity": 18,
+        "f:63:15:63:16": 8,
+        "s:63:26:71:Infinity": 19,
+        "b:69:13:69:18:69:22:69:Infinity": 3,
+        "s:76:2:88:Infinity": 20,
+        "b:83:32:88:Infinity:88:14:88:Infinity": 4
+      },
+      "fnNames": {}
+    }
+  }
+}
